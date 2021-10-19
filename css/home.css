@@ -146,6 +146,7 @@ transform: rotate(-50deg);
   margin-right: 0;
 }
                               /* slider ends */
+
                             /* All products button in homepage styles start */
 .AllProducts{
   text-align: center;
@@ -171,12 +172,11 @@ transform: rotate(-50deg);
 }
                             /* All products button in homepage styles end */
 
-                            .clearfix::after {
-                              content: "";
-                              clear: both;
-                              display: table;
-                            }
-                            /* All products button in homepage styles end */
+ .clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
 
                             /* home page lower card starts */
 #container{
