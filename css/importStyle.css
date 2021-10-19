@@ -1,0 +1,161 @@
+html,body{ padding-right: 0px;margin: 0px;overflow-x: hidden; }
+body{
+  background-color: rgb(250, 249, 246);
+  background-position:center center fixed;
+  background-attachment: fixed;
+  width: 100%;
+  font-style: normal;
+}
+.image{
+  width: 40vh;
+  height: 10vh;
+}                       
+#main-navbar{
+  height: 80px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(30px);
+  position: fixed !important;
+ }
+input{
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 25px;
+  top: 3px;
+  color: white;
+  position: relative;
+}
+input:focus {
+  outline: none !important;
+}
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}
+.logo{
+  /* border: 1px solid white; */
+  position: absolute;
+  left: 44%;
+  top:0px;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.logo-upper{
+ position: relative;
+ width: 35px;
+ max-height: 29.85px;  
+}
+.logo-lower{
+  position: relative;
+  top: -13px;
+  width: 28.74px;
+  left: -3px;
+  max-height: 22.02px;
+}
+.logo-ball{
+  position: relative;
+  width: 10.89px;
+  max-height:10.55px;
+  top:-27px;
+  position: relative;
+  left: -6px;
+}
+.logo>p{
+  color:white;
+  position: relative;
+  top: -32px;
+}
+.icons{
+   display: inline-block;
+   margin: 0 4% 0 4%;
+   text-align: center;
+   cursor: pointer;
+   
+}
+.side-icons{
+  width: 49%;
+  float: right;
+  box-sizing: border-box;
+  padding-top: 20px;
+  text-align: center;  
+  height: 100%;  
+}
+.nav-link{
+  color: white !important;
+}
+nav{
+  height: 100%;
+  width: 40%;
+  /* border: 1px solid red; */
+  padding-left: 30px !important;
+}
+#navbarNav{
+  /* border: 1px solid red; */
+  padding-left: 85px;
+}
+.navbar-nav > li{
+  padding-left:40px;
+  padding-right:40px;
+  cursor: pointer;
+
+
+}
+.nav-item>a{ 
+  font-size: 14px;
+  line-height: 19px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.flex-container > div {
+  margin: 80px;
+  padding: 20px;
+  font-size: 30px;
+}
+.sec3{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(250, 249, 246);
+}
+.sec3h1{
+  font-family: Avenir Next;
+font-style: normal;
+font-weight: 600;
+font-size: 80px;
+line-height: 109px;
+}
+.sec3h3{
+  font-family: Avenir Next;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 33px;
+color: #257B9D;
+}
+.carditems{
+  display: flex;
+  justify-content: space-evenly;
+}
+.bottompart{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:  rgba(255, 255, 255, 0.8);
+}
+.para{
+font-family: Avenir Next;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 27px;
+}
+
+ 

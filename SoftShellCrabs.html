@@ -1,0 +1,138 @@
+<html>
+  <head>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/home.css"> 
+        <link rel="stylesheet" href="css/ItemCard.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/NavBar.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/home.js"></script>
+        <!-- <script src="js/All_Products.js"></script> -->
+        <title>Soft Shell Crabs</title>
+  </head>
+  
+  <body onload="loadAllFish()">
+      <!-- main navbar starts -->
+  <div id="main-navbar" style="z-index: 1;">
+ 
+    <div class="side-icons">
+      
+     <input type="text" placeholder="Search">
+      <div class="icons" ><img src="img/favourite.svg" alt=""></div>
+      <div class="icons" ><img src="img/cartIcon.svg" alt=""></div>
+      <div class="icons" id="account" onclick="modal_func_ACCOUNT()"><img src="img/account.svg" alt=""></div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" style="background-color: white;" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" id="myBtn"  onclick="modal_func_PRODUCTS()" style="cursor: pointer;">PRODUCTS<span class="sr-only">(current)</span></a>             
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutus.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Import.html">IMPORT</a>
+            </li>
+          </ul>
+      </div>
+  </nav>
+    <div class="logo" >
+      <img class="logo-upper" src="img/Vector.svg" alt=""><br>
+      <img class="logo-lower" src="img/Vector2.svg" alt=""><br>
+      <img class="logo-ball" src="img/vectorball.svg" alt="">
+      <p><a href="home.html" style="text-decoration: none;color: white;">Food Network Agro</a></p>
+    </div>
+  </div>
+  <!-- main navbar ends -->
+   
+
+     <!-- The products Modal starts -->
+<div id="productsModal" class="modal" style="z-index: 2000;">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <ul style=" list-style-type: none;">
+      <li>Product Categories<span class="close">&times;</span></li>
+      <li><a href="AllProducts.html" style="text-decoration: none;color: black;">All Products<span> <img src="./img/arrow.svg" alt="next"></span></a></li>
+      <li>Soft Shell Crab</li>
+      <li><a href="SeaFood.html" style="text-decoration: none;color: black;">SeaFood</a></li>
+      <li>Sundarbans Farm</li>
+      <li>Fresh Water Fish</li>
+    </ul>
+  </div>
+
+</div>
+<!-- The products Modal ends -->
+
+<!-- The account Modal starts -->
+
+<div id="accountModal" class="right" style="z-index: 2000;">
+
+  <!-- Modal content -->
+  <div class="rightcontent">
+    <ul style=" list-style-type: none;line-height: 45px;">
+      <li style="border-bottom: 1px solid  #257B9D;">My Account<span class="closed">&times;</span></li>
+      <li style="border-bottom: 1px solid  #257B9D;" onclick="modal_func_ACCOUNT_SETTINGS()" style="cursor: pointer;" id="settingsModal">Account Settings<span style="float: right;cursor: pointer;">></span></li>
+      <li style="border-bottom: 1px solid  #257B9D;">Notifications</li>
+      <li style="border-bottom: 1px solid  #257B9D;">My discounts</li>
+      <li style="border-bottom: 1px solid  #257B9D;">Track my order</li>
+      <li style="border-bottom: 1px solid  #257B9D;"><a style="text-decoration: none;color: black;" href="SignIn_SignUp.html">Sign in/Sign up/Log out</a></li>
+      
+
+    </ul>
+  </div>
+
+</div>
+
+<!-- The account Modal ends -->
+
+<!-- The accountSettings Modal starts -->
+<div id="accountSettingsModal" class="rightSettings" style="z-index: 7000;">
+
+  <!-- Modal content -->
+  <div class="rightSettingsContent">
+    <ul style=" list-style-type: none;line-height: 45px;">
+      <li style="border-bottom: 1px solid  #257B9D;">Account Settings<span class="closes">&times;</span></li>
+      <li style="cursor: pointer;border-bottom: 1px solid  #257B9D;">Update Information</li>
+      <li style="cursor: pointer;border-bottom: 1px solid  #257B9D;">Update Password</li>
+    
+    </ul>
+  </div>
+
+</div>
+
+<!-- The accountSettings Modal ends -->
+
+
+               <!-- Soft Shell Crabs heading starts -->
+    <div class="ProductsHeading">
+      <span>Soft</span><br>
+      <span>Shell Crabs<sup class="count_of_products" id="supSoft_Shell"></sup></span> 
+    </div>
+        
+               <!-- Soft Shell Crabs  heading ends -->
+
+    <div id="Soft_Products" style="display: flex;flex-wrap: wrap;box-sizing: border-box;padding:50px;">
+          <!-- soft shell crabs items in the js file -->
+    </div>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+    </body>
+
+</html>

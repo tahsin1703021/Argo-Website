@@ -1,0 +1,349 @@
+html,body{ padding-right: 0px;margin: 0px;overflow-x: hidden; }
+body{
+  background-image: url("background2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center fixed;
+  background-attachment: fixed;
+  width: 100%;
+  font-style: normal;
+}
+
+.image{
+    width: 40vh;
+    height: 10vh;
+}
+.content{
+  position: relative;
+  width: 140vh;
+  color: white;
+  left: 10%;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  font-size: 17px;
+}
+.visioninfo{
+  font-style: normal;
+  font-weight: 20px;
+  line-height: 27px;
+  font-size: 17px;
+
+  position: relative;
+  width: 55vh;
+  color: white;
+  left: 10%;
+} 
+.missioninfo{
+  font-style: normal;
+  font-weight: 20px;
+  line-height: 27px;
+  font-size: 17px;
+
+  position: relative;
+  width: 52vh;
+  color: white;
+  left: 10%;
+} 
+/* navbar styles starts */
+#main-navbar{
+  /* border:2px solid red; */
+  height: 80px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(30px);
+  position: fixed;
+ }
+ 
+input{
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 25px;
+  top: 3px;
+  color: white;
+  position: relative;
+}
+input:focus {
+  outline: none !important;
+}
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}
+.logo{
+  position: absolute;
+  left: 43.5%;
+  top:0px;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.logo-upper{
+ position: relative;
+ width: 35px;
+max-height: 28.85px;  
+}
+.logo-lower{
+  position: relative;
+  top: -12px;
+  width: 28.74px;
+  left: -3px;
+  max-height: 23.02px;
+}
+.logo-ball{
+  position: relative;
+  width: 10.89px;
+  max-height:9.55px;
+  top:-25px;
+  position: relative;
+  left: -6px;
+}
+a{
+  text-decoration: none;
+}
+.logo>p{
+  color:white;
+  position: relative;
+  top: -30px;
+}
+.icons{
+   display: inline-block;
+   margin: 0 4% 0 4%;
+   text-align: center;
+   
+}
+.side-icons{
+  width: 45%;
+  float: right;
+  box-sizing: border-box;
+  padding-top: 20px;
+  margin-right: 30px;
+  text-align: center;  
+  height: 100%;
+  
+  
+}
+.nav-link{
+  color: white !important;
+}
+nav{
+  height: 100%;
+  width: 40%;
+  /* changed right now */
+  /* border: 1px solid red; */
+}
+.navbar{
+  box-sizing: border-box;
+  padding-left: 95px;
+}
+#navbarNav{
+  box-sizing: border-box;
+  padding-left: 20px;
+  /* border: 1px solid red; */
+}
+.navbar-nav > li{
+  padding-left:40px;
+  padding-right:40px;
+  cursor: pointer;
+}
+.nav-item>a{
+  
+font-size: 14px;
+line-height: 19px;
+}
+                        /* navbar styles ends */
+
+                        /* side icons styles starts */
+.side-icons div{
+  cursor: pointer;
+}
+                                                  /* side icons styles ends */
+                                  /* fish fro home  styles start */
+.fishforhome{
+  width: 100%;
+  background-image: url(../img/crab-2.gif);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 800px;
+  left: 0px;
+  top: 71px;
+  margin-bottom: 100px;
+}
+                        /* fish fro home  styles end */                
+
+.foodnetwork{
+  position: relative;
+  left: 65vh;
+  top: 94vh;
+}
+   /* home page lower card starts */
+   #container{
+    height: 550px;
+    box-sizing: border-box;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(60px);
+    color: white;
+  }
+                            /* home page lower card ends */
+                            
+                                  /* home page modal styling starts */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed !important; /* Stay in place */
+  padding-top: 100px !important; /* Location of the box */
+  left: 0 !important; 
+  top: 0 !important;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+                                /* Modal Content */
+.modal_content {
+  background-color: #fefefe;
+  padding:20px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  border: 1px solid #888;
+  position: fixed;
+	width: 320px;
+	height: 100%;
+  top: 0%;
+	transform: translate3d(0%, 0, 0);	
+  
+}
+.modal-content li {
+  border-bottom: 1px solid  #257B9D;
+}
+.modal-content ul{
+  list-style-type: none;
+  cursor: pointer;
+  line-height: 45px;
+} 
+.right {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  right:0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+                                  /* Modal Content */
+.rightcontent {
+  background-color: #fefefe;
+  margin: auto;
+  right:0;
+  padding:20px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  border: 1px solid #888;
+  position: fixed;
+	width: 320px;
+	height: 100%;
+  top: 0%;
+	transform: translate3d(0%, 0, 0);		
+  
+}
+.rightSettings {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  right:0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+                              /* Modal Content */
+.rightSettingsContent {
+  background-color: #fefefe;
+  margin: auto;
+  right:0;
+  padding:20px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  border: 1px solid #888;
+  position: fixed;
+	width: 320px;
+	height: 34%;
+  top: 0%;
+	transform: translate3d(0%, 0, 0);		
+  
+}
+                               /* Modal Content */
+
+                              /* The Close Button */
+
+                              /* products modal close button starts */
+   .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+                                 /* products modal close button ends */
+                            
+                                 /* account modal close button starts */
+
+.closed {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  display: inline;
+  
+}
+.closed:hover,
+.closed:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+                                /* account modal close button ends */
+                                /* account settings modal starts */
+
+.closes {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  bottom: 10px;
+  position: relative;
+}
+
+.closes:hover,
+.closes:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+                                   /* account settings modal ends*/
+
+.model-content li{
+  list-style-type: none;
+}

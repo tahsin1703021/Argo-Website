@@ -1,0 +1,145 @@
+html,body{ padding-right: 0px;margin: 0px;overflow-x: hidden; }
+body{
+  background-image: url("img/background2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center fixed;
+  background-attachment: fixed;
+  width: 100%;
+  font-style: normal;
+}
+
+.image{
+    width: 40vh;
+    height: 10vh;
+}
+.content{
+  position: relative;
+  width: 140vh;
+  color: white;
+  left: 10%;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  font-size: 17px;
+}
+.visioninfo{
+  font-style: normal;
+  font-weight: 20px;
+  line-height: 27px;
+  font-size: 17px;
+
+  position: relative;
+  width: 55vh;
+  color: white;
+  left: 10%;
+} 
+.missioninfo{
+  font-style: normal;
+  font-weight: 20px;
+  line-height: 27px;
+  font-size: 17px;
+
+  position: relative;
+  width: 52vh;
+  color: white;
+  left: 10%;
+} 
+
+                          
+#main-navbar{
+  height: 80px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(30px);
+  position: fixed !important;
+ }
+input{
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 25px;
+  top: 3px;
+  color: white;
+  position: relative;
+}
+input:focus {
+  outline: none !important;
+}
+::placeholder { 
+  color: white;
+  opacity: 1; 
+}
+.logo{
+  position: absolute;
+  left: 40%;
+  top:0px;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.logo-upper{
+ position: relative;
+ width: 35px;
+ max-height: 29.85px;  
+}
+.logo-lower{
+  position: relative;
+  top: -13px;
+  width: 28.74px;
+  left: -3px;
+  max-height: 22.02px;
+}
+.logo-ball{
+  position: relative;
+  width: 10.89px;
+  max-height:10.55px;
+  top:-25px;
+  position: relative;
+  left: -6px;
+}
+.logo>p{
+  color:white;
+  position: relative;
+  top: -32px;
+}
+.icons{
+   display: inline-block;
+   margin: 0 4% 0 4%;
+   text-align: center;
+   
+}
+.side-icons{
+  width: 49%;
+  float: right;
+  box-sizing: border-box;
+  padding-top: 20px;
+  text-align: center;  
+  height: 100%;
+  
+  
+}
+.nav-link{
+  color: white !important;
+}
+nav{
+  height: 100%;
+  padding-left: 10px;
+  box-sizing: border-box;
+  width: 38%;
+}
+.navbar-nav > li{
+  padding-left:40px;
+  padding-right:40px;
+}
+.nav-item>a{ 
+font-size: 14px;
+line-height: 19px;
+}
+.foodnetwork{
+  position: relative;
+  left: 65vh;
+  top: 94vh;
+}

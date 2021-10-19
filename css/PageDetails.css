@@ -1,0 +1,79 @@
+html,body{ padding-right: 0px;margin: 0px;overflow-x: hidden; }
+@font-face { font-family: AvenirNext; src: url(../AvenirNextLTPro-Demi.otf); }
+body{
+  background-image: url(background2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center fixed;
+  background-attachment: fixed;
+  width: 100%;
+  font-style: normal;
+  
+/* font-weight: 600; */
+}
+#DetailedSection{
+    margin-top: 15%;
+}
+.productBox{
+    display: flex;
+    border-bottom:1px solid black;
+    border-top:1px solid black;
+    width: 70%;
+    margin:auto;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/* img{
+    height: 30em;
+} */
+.itemHeader{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 5px;
+}
+.itemPrice{
+    margin-bottom: 20px;
+}
+.itemConfig{
+    display: flex;
+    justify-content: space-between;
+}
+.addToCartButton{
+    text-align: center;
+    width:99%;
+    left: 2px;
+    right: 0%;
+    height: 35px;
+    /* display: none; */
+    background-color: white;
+    /* position: absolute; */
+    /* bottom: 2px; */
+    border-radius: 3px;
+    border: none;
+    font-weight: 600;
+}
+.addToCartButton:hover{
+    background-color: black;
+    color: white;
+}
+.buyButton{
+    text-align: center;
+    width:99%;
+    left: 2px;
+    right: 0%;
+    height: 35px;
+    font-weight: 600;
+    /* display: none; */
+    background-color: orange;
+    /* position: absolute; */
+    /* bottom: 2px; */
+    border-radius: 3px;
+    border: none;
+}
+.buyButton:hover{
+    background-color: black;
+    color: white;
+}

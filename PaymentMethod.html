@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Method</title>
+</head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+    	body {
+        background:linear-gradient(0deg, #F3F2ED, #F3F2ED);
+    	}
+    	.links {
+    		text-decoration: none !important;
+    	}
+
+    	.heading {
+    		font-weight: bold;
+    	}
+      * {
+      box-sizing: border-box;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .flex-item-left {
+        padding: 30px;
+        padding-left: 70px;
+        padding-right: 70px;
+        flex: 60%;
+        border-right: 1px solid green; 
+      }
+      .flex-item-right {
+        padding: 30px;
+        padding-left: 50px;
+        flex: 40%;
+      }
+      /* Responsive layout - makes a one column-layout instead of two-column layout */
+      @media (max-width: 800px) {
+        .flex-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+<body>
+	
+<div class="flex-container">
+
+  <div class="flex-item-left" style="margin-left: 50px;">
+    			<br>
+    			<div style="display: flex;">
+            <div style="box-sizing: border-box;padding: 10px;"><img src="./img/Loogo.svg" alt=""></div>
+            <div style="box-sizing: border-box;padding: 10px;"><img src="./img/Food Network Agro.svg" alt=""></div>
+          </div>
+    			<br>
+    			<p><a href="" class="links" >Cart</a> > <a href="" class="links" >Shipping</a> > Payment</p>
+    			<p class="heading">Select payment method</p>
+    				<form>
+          <div class="form-row">
+            <div class="col">
+                <select class="form-control" style="border-radius: 10px;">
+                  <option selected="selected">Card/mobile banking/cash on delivery</option>
+                  <option>Card</option>
+                  <option>Bkash</option>
+                  <option>Rocket</option>
+                  <option>Nagad</option>
+                </select>
+            </div>
+            <div class="col" style="margin: auto;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/800px-Visa_Inc._logo.svg.png" style="height: 15px;">
+              <img src="https://cdn.vox-cdn.com/thumbor/K5wnjGtVsJrnM5x4vF7b0IrWUbo=/0x0:1000x1000/920x613/filters:focal(421x430:581x590):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/62800797/Mastercard_logo.0.jpg" style="height: 20px;">
+              <img src="https://www.logo.wine/a/logo/BKash/BKash-Icon2-Logo.wine.svg" style="height: 27px;">
+              <img src="https://seeklogo.com/images/D/dutch-bangla-rocket-logo-B4D1CC458D-seeklogo.com.png" style="height: 20px;">
+              <img src="https://www.logo.wine/a/logo/Nagad/Nagad-Vertical-Logo.wine.svg" style="height: 32px;">
+            </div>
+          </div>
+          <br>
+          <br>
+          <p class="heading">Payment</p>
+  				<div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Name on card" style="border-radius: 10px;">
+            </div>
+          </div>
+  				<br>
+  				<div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Card Number" style="border-radius: 10px;">
+            </div>
+          </div>
+  				<br>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Expiration date (MM / YY)" style="border-radius: 10px;">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Security Code">
+            </div>
+          </div>
+          <br>
+          <div style="border: 1px solid black;border-radius: 10px;padding: 5px;">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" style="border:1px solid #C4C4C4;">
+              <label class="form-check-label" for="gridCheck">Save my information for faster checkout</label>
+          </div>
+          </div>
+          <br>
+  				<button type="button" class="btn btn-dark" style="width: 218px;height: 60px;border-radius: 8px;">Pay Now</button>
+  				<button type="button" class="btn btn-light" style="margin-left: 10px;background: transparent;"><a href="./CheckOut.html" style="text-decoration: none;"><span style="color: #257B9D;font-weight: 500;">Return to shipping</span></a></button>
+					</form>
+  </div>
+  <div class="flex-item-right">
+     <br>
+    <p class="heading">Cart</p>
+  </div>
+
+</div>
+
+
+</body>
+</html>
