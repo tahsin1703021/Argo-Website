@@ -28,9 +28,9 @@ const loadAllFish = async () => {
     all_items.map(items=>{
       const divElement= 
        `<div class="item" onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} name=${items.name} onclick="FoundIt(this)">
-            <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="">
+            <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="Like">
               <div class="item-background">
-              <img src="img/breadedshellcrab.svg" alt="">  
+              <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
                 <button> Add to cart </button>
               </div>
               <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -94,10 +94,10 @@ const loadAllFish = async () => {
 
       soft_shell_crab.map(items=>{
        const divElement= 
-        `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id}>
-          <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="">
+        `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
+          <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="Like">
           <div class="item-background">
-            <img src="img/breadedshellcrab.svg" alt="">  
+            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
             <button> Add to cart </button>
           </div>
           <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -128,10 +128,10 @@ const loadAllFish = async () => {
       
       seafood.map(items=>{
         const divElement= 
-         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id}>
-            <img class="favClick" src="img/whiteHeart.svg" alt="">
+         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
+            <img class="favClick" src="img/whiteHeart.svg" alt="Like">
              <div class="item-background">
-            <img src="img/breadedshellcrab.svg" alt="">  
+            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
              <button> Add to cart </button>
            </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -157,10 +157,10 @@ const loadAllFish = async () => {
        
        sundarban.map(items=>{
         const divElement= 
-         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id}>
-         <img class="favClick" src="img/whiteHeart.svg" alt="">
+         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
+         <img class="favClick" src="img/whiteHeart.svg" alt="Like">
            <div class="item-background">
-           <img src="img/breadedshellcrab.svg" alt="">  
+           <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
              <button> Add to cart </button>
            </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -186,10 +186,10 @@ const loadAllFish = async () => {
 
        fresh_water.map(items=>{
         const divElement= 
-         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id}>
-          <img class="favClick" src="img/whiteHeart.svg" alt="" onclick="chooseFav(this)">
+         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
+          <img class="favClick" src="img/whiteHeart.svg" alt="Like" onclick="chooseFav(this)">
            <div class="item-background">
-           <img src="img/breadedshellcrab.svg" alt="">  
+           <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
              <button> Add to cart </button>
            </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -222,15 +222,17 @@ const chooseFav = (element) =>{
   console.log("hello");
 }
 const FoundIt = (element) => {
-    let name,price;  
+    let name,largePrice,smallPrice;  
    all_items.map(card => {
      // console.log(card);
      if(element.id === card._id){
        name = card.name;
-       price = card.largePrice;
-     }
+       largePrice = card.largePrice;
+       smallPrice = card.smallPrice;
+
+      }
    });
-   const URL = "http://127.0.0.1:5500/ItemDetails.html?name="+name+";price="+price;
+   const URL = "http://127.0.0.1:5500/ItemDetails.html?name="+name+";smallPrice="+smallPrice+";largePrice="+largePrice;
    document.location.href = URL;
 }
 const addtocart = (element) =>{

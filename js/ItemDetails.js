@@ -1,8 +1,13 @@
 var href = document.location.href;
 var link = href.split('?')[1];
-
-console.log(link.split(';')[0].split('=')[1]);
-console.log(link.split(';')[1].split('=')[1])
+var FullName = link.split(';')[0].split('=')[1];
+var str = FullName.split('%20');
+var a  = "";
+for (var i =0;i<str.length;i++){
+    a= a + str[i] + " ";
+}
+var smallPrice = link.split(';')[1].split('=')[1];
+var largePrice = link.split(';')[2].split('=')[1];
 
 const loading = () => {
     let detailedID = document.getElementById('DetailedSection');
@@ -12,14 +17,12 @@ const loading = () => {
     </div>
     <div class="itemDetails">
         <div class="itemHeader">
-            <div class="itemHeading"><h1 id="itemHeading" style="color: white;">Bagda Fish</h1></div>
+            <div class="itemHeading"><h1 id="itemHeading" style="color: white;">${a}</h1></div>
             <div class="chooseFavourite"><img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt=""></div>    
         </div>
         <div class="itemPrice">
-            <h4 style="color: white;">&#2547; <span>800-1200</span>/-</h4>
+            <h4 style="color: white;">&#2547; <span>${smallPrice}-${largePrice}</span>/-</h4>
         </div>
-        <div class="itemDescription" style="margin-bottom: 60px;"><p style="color: white;font-weight: 100;">Fresh Badgda Fish straught outta Sundarbans</p></div>
-        
         <div style="display: flex;justify-content: space-between;">
             <div>Select Quantity</div>
             <div>Available Sizes</div>
