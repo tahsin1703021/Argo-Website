@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Check Out</title>
+</head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+    	body {
+        background:linear-gradient(0deg, #F3F2ED, #F3F2ED);
+    	}
+    	.links {
+    		text-decoration: none !important;
+    	}
+
+    	.heading {
+    		font-weight: 600;
+        font-size: 24px;
+        line-height: 32.87px;
+        border-bottom: 1px solid #257B9D;
+        padding-bottom: 10px;
+    	}
+      * {
+      box-sizing: border-box;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .flex-item-left {
+        padding: 30px;
+        padding-left: 70px;
+        padding-right: 70px;
+        flex: 60%;
+        border-right: 1px solid green; 
+      }
+      .flex-item-right {
+        padding: 30px;
+        padding-left: 50px;
+        flex: 40%;
+      }
+ 
+.size .value-button{
+  border: 1px solid black;
+
+}
+.value-button {
+  display: inline-block;
+  text-align: center;
+  width:22.7px;
+  height:22.7px;
+  border-radius:4.13px;
+  margin:2px;
+}
+.quantity .value-button{  
+  color: black;
+  border:1px solid black;
+}
+form #decrease {
+  margin-right: -4px;
+}
+
+form #increase {
+  margin-left: -4px;
+}
+
+input#number {
+  text-align: center;
+  border: none;
+  margin: 0px;
+  width: 40px;
+  height: 30px;
+  color: black;
+  background-color:transparent ;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.value-button:hover {
+  cursor: pointer;
+}
+      /* Responsive layout - makes a one column-layout instead of two-column layout */
+      @media (max-width: 800px) {
+        .flex-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+<body>
+	
+<div class="flex-container" style="margin-left: 50px;">
+
+  <div class="flex-item-left">
+    			<br>
+          <div style="display: flex;">
+            <div style="box-sizing: border-box;padding: 10px;"><img src="./img/Loogo.svg" alt=""></div>
+            <div style="box-sizing: border-box;padding: 10px;"><img src="./img/Food Network Agro.svg" alt=""></div>
+          </div>
+
+    			<br>
+    			<p><a href="" class="links" >Cart</a> > <a href="" class="links" >Shipping</a> > Payment</p>
+    			<p class="heading">Contact Information</p>
+    			<form action="./PaymentMethod.html">
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Name" style="border-radius: 10px;">
+            </div>
+          </div>
+          <br>
+          <br>
+          <p class="heading">Shipping address</p>
+  				<div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First name" style="border-radius: 10px;">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name" style="border-radius: 10px;">
+            </div>
+          </div>
+  				<br>
+  				<div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Address" style="border-radius: 10px;">
+            </div>
+          </div>
+          <br>
+          <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Apartment, suits etc, (optional)" style="border-radius: 10px;">
+            </div>
+          </div>
+  				<br>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="City" style="border-radius: 10px;">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Postal code" style="border-radius: 10px;">
+            </div>
+          </div>
+          <br>
+          <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Phone number" style="border-radius: 10px;">
+            </div>
+          </div>
+          <br>
+  				<input type="submit" class="btn btn-dark" style="width: 218px;height: 60px;border-radius: 8px;" value="Proceed to Payment">
+  				<input type="button" class="btn btn-light" style="margin-left: 10px;background: transparent;" value="Go Back">
+					</form>
+  </div>
+  <div class="flex-item-right">
+    <br>
+    <p class="heading">Cart</p>
+    <div style="border:1px solid red;height: 300px;margin-top: -16px;overflow: scroll;">
+      <div style="display: flex;justify-content: space-between;box-sizing: border-box;padding: 20px;">
+        <div style="margin:20px 10px 10px 10px;"><img src="img/cartImage.svg" alt=""></div>
+        <div style="width: 200px;display: flex;flex-direction: column;justify-content: space-between;box-sizing: border-box;padding: 10px;">
+          
+          <div style="font-size: 20px;font-weight: 600;">Bagda Fish</div>
+          <div class="size">
+            <div class="value-button" id="small-size" style="background: #C7C7C7;"><strong>S</strong></div> 
+            <div class="value-button" id="medium-size"style="background: #C7C7C7;margin-left:9px;margin-right:9px"><strong>M</strong></div> 
+            <div class="value-button" id="large-size" style="background: #C7C7C7;"><strong>L</strong></div> 
+          </div>
+          <div class="quantity">
+            <div class="value-button" id="decrease"  value="Decrease Value"><strong>-</strong></div>
+            <input type="number" id="number" style="height:22.7px;top:-2px" value="0"/>
+            <span class="value-button" id="increase" value="Increase Value" ><strong>+</strong></span>
+          
+          </div>
+        </div>
+        <div>
+          <div>el[kopj</div> kbjgrfvcellnig
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+</body>m
+</html>
