@@ -4,8 +4,6 @@ var sundarban = [];
 var fresh_water = []; 
 var all_items = [];
 var total_count_of_all_items;
-var total_count_of_soft_shell;
-var count = 1200;
 
 const loadAllFish = async () => {
   console.log('loading all fishes');
@@ -82,12 +80,14 @@ const loadAllFish = async () => {
       // console.log(seafood);
 
       response_sundarban.data.map(response =>{
-        sundarban.push(response);        
+        sundarban.push(response);  
+        console.log("ekhaen");      
       });
       // console.log(sundarban);
 
       response_fresh.data.map(response =>{
-        fresh_water.push(response);        
+        fresh_water.push(response);
+       
       });
       // console.log(fresh_water);
      
@@ -122,9 +122,10 @@ const loadAllFish = async () => {
       const softproducts = document.getElementById('Soft_Products');
       if(softproducts != null){
        softproducts.innerHTML+=divElement;
-       // console.log("not null");this is will only execute when someone enters the all products page
        }
       });
+      // total_count_of_soft_shell = soft_shell_crab.length;
+      // document.getElementById('supSoft_Shell').innerHTML+=total_count_of_soft_shell;
       
       seafood.map(items=>{
         const divElement= 
@@ -153,9 +154,14 @@ const loadAllFish = async () => {
        if(slide != null){
         slide.innerHTML+=divElement;
       }
+      const seaFood_products = document.getElementById('Sea');
+      if(seaFood_products != null){
+        seaFood_products.innerHTML+=divElement;
+        }
        });
        
        sundarban.map(items=>{
+        console.log("ekhaen");
         const divElement= 
          `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
          <img class="favClick" src="img/whiteHeart.svg" alt="Like">
@@ -182,6 +188,10 @@ const loadAllFish = async () => {
        if(slide != null){
         slide.innerHTML+=divElement;
       }
+      const sundarban_products = document.getElementById('Sundarban_Products');
+      if(Sundarban_Products!= null){
+        Sundarban_Products.innerHTML+=divElement;
+        }
        });
 
        fresh_water.map(items=>{
@@ -211,6 +221,10 @@ const loadAllFish = async () => {
        if(slide != null){
         slide.innerHTML+=divElement;
       }
+      const fresh_products = document.getElementById('Fresh_Water_Products');
+      if(fresh_products!= null){
+        fresh_products.innerHTML+=divElement;
+        }
        });
        
   }))
