@@ -1,190 +1,364 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Check Out</title>
+  <title>Check Out</title>
 </head>
 <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style type="text/css">
-    	body {
-        background:linear-gradient(0deg, #F3F2ED, #F3F2ED);
-    	}
-    	.links {
-    		text-decoration: none !important;
-    	}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<style type="text/css">
+  body {
+    background: linear-gradient(0deg, #f3f2ed, #f3f2ed);
+    overflow: hidden;
+  }
 
-    	.heading {
-    		font-weight: 600;
-        font-size: 24px;
-        line-height: 32.87px;
-        border-bottom: 1px solid #257B9D;
-        padding-bottom: 10px;
-    	}
-      * {
-      box-sizing: border-box;
-      }
-      .flex-container {
-        display: flex;
-        flex-direction: row;
-      }
-      .flex-item-left {
-        padding: 30px;
-        padding-left: 70px;
-        padding-right: 70px;
-        flex: 60%;
-        border-right: 1px solid green; 
-      }
-      .flex-item-right {
-        padding: 30px;
-        padding-left: 50px;
-        flex: 40%;
-      }
- 
-.size .value-button{
-  border: 1px solid black;
+  .links {
+    text-decoration: none !important;
+  }
 
-}
-.value-button {
-  display: inline-block;
-  text-align: center;
-  width:22.7px;
-  height:22.7px;
-  border-radius:4.13px;
-  margin:2px;
-}
-.quantity .value-button{  
-  color: black;
-  border:1px solid black;
-}
-form #decrease {
-  margin-right: -4px;
-}
+  .heading {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    border-bottom: 1px solid #257b9d;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
 
-form #increase {
-  margin-left: -4px;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-input#number {
-  text-align: center;
-  border: none;
-  margin: 0px;
-  width: 40px;
-  height: 30px;
-  color: black;
-  background-color:transparent ;
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-item-left {
+    padding: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    flex: 60%;
+    border-right: 1px solid #257B9D;
+  }
+
+  .flex-item-right {
+    padding: 30px;
+    padding-left: 50px;
+    flex: 40%;
+  }
+
+  .value-button {
+    display: inline-block;
+    text-align: center;
+    width: 24.02px;
+    height: 24.02px;
+    border-radius: 4.13px;
+  }
+
+  form #decrease {
+    margin-right: -4px;
+  }
+
+  form #increase {
+    margin-left: -4px;
+  }
+
+  .form-control-sm {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  input#number {
+    text-align: center;
+    border: none;
+    margin: 10px;
+    width: 40px;
+    height: 20px;
+    color: black;
+    background-color: transparent;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    margin: 0;
-}
-.value-button:hover {
-  cursor: pointer;
-}
-      /* Responsive layout - makes a one column-layout instead of two-column layout */
-      @media (max-width: 800px) {
-        .flex-container {
-          flex-direction: column;
-        }
-      }
-    </style>
+    margin: 10;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .value-button:hover {
+    cursor: pointer;
+  }
+
+  .cart {
+    height: 320px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+
+  .cart-items {
+    height: 155px;
+    width: 100%;
+    border-bottom: 1px solid #257b9d;
+    margin-bottom: 10px;
+  }
+
+  .cart-quantity {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+  }
+
+  .quantity {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+    width: 100px;
+    border-radius: 8px;
+  }
+
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+</style>
+
 <body>
-	
-<div class="flex-container" style="margin-left: 50px;">
-
-  <div class="flex-item-left">
-    			<br>
-          <div style="display: flex;">
-            <div style="box-sizing: border-box;padding: 10px;"><img src="./img/Loogo.svg" alt=""></div>
-            <div style="box-sizing: border-box;padding: 10px;"><img src="./img/Food Network Agro.svg" alt=""></div>
-          </div>
-
-    			<br>
-    			<p><a href="" class="links" >Cart</a> > <a href="" class="links" >Shipping</a> > Payment</p>
-    			<p class="heading">Contact Information</p>
-    			<form action="./PaymentMethod.html">
-          <div class="form-row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Name" style="border-radius: 10px;">
-            </div>
-          </div>
-          <br>
-          <br>
-          <p class="heading">Shipping address</p>
-  				<div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="First name" style="border-radius: 10px;">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Last name" style="border-radius: 10px;">
-            </div>
-          </div>
-  				<br>
-  				<div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Address" style="border-radius: 10px;">
-            </div>
-          </div>
-          <br>
-          <div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Apartment, suits etc, (optional)" style="border-radius: 10px;">
-            </div>
-          </div>
-  				<br>
-          <div class="form-row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="City" style="border-radius: 10px;">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Postal code" style="border-radius: 10px;">
-            </div>
-          </div>
-          <br>
-          <div class="form-row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Phone number" style="border-radius: 10px;">
-            </div>
-          </div>
-          <br>
-  				<input type="submit" class="btn btn-dark" style="width: 218px;height: 60px;border-radius: 8px;" value="Proceed to Payment">
-  				<input type="button" class="btn btn-light" style="margin-left: 10px;background: transparent;" value="Go Back">
-					</form>
-  </div>
-  <div class="flex-item-right">
-    <br>
-    <p class="heading">Cart</p>
-    <div style="border:1px solid red;height: 300px;margin-top: -16px;overflow: scroll;">
-      <div style="display: flex;justify-content: space-between;box-sizing: border-box;padding: 20px;">
-        <div style="margin:20px 10px 10px 10px;"><img src="img/cartImage.svg" alt=""></div>
-        <div style="width: 200px;display: flex;flex-direction: column;justify-content: space-between;box-sizing: border-box;padding: 10px;">
-          
-          <div style="font-size: 20px;font-weight: 600;">Bagda Fish</div>
-          <div class="size">
-            <div class="value-button" id="small-size" style="background: #C7C7C7;"><strong>S</strong></div> 
-            <div class="value-button" id="medium-size"style="background: #C7C7C7;margin-left:9px;margin-right:9px"><strong>M</strong></div> 
-            <div class="value-button" id="large-size" style="background: #C7C7C7;"><strong>L</strong></div> 
-          </div>
-          <div class="quantity">
-            <div class="value-button" id="decrease"  value="Decrease Value"><strong>-</strong></div>
-            <input type="number" id="number" style="height:22.7px;top:-2px" value="0"/>
-            <span class="value-button" id="increase" value="Increase Value" ><strong>+</strong></span>
-          
+  <div class="flex-container" style="margin-left: 50px;">
+    <div class="flex-item-left">
+      <div style="display: flex">
+        <div>
+          <img style="width:99px; height:137px;" src="./img/Loogo.svg" alt="" />
+        </div>
+        <div style="box-sizing: border-box; padding-left: 10px">
+          <img style="width:161px; height:132px;" src="./img/FoodNetworkAgro.svg" alt="" />
+        </div>
+      </div>
+      <p>
+        <a href="" class="links">Cart</a> > Shipping
+      </p>
+      <p class="heading" style="font-weight:bold">Contact Information</p>
+      <form action="#">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="Name" />
           </div>
         </div>
-        <div>
-          <div>el[kopj</div> kbjgrfvcellnig
+        <p class="heading" style="font-weight:bold">Shipping address</p>
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="First name" required/>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="Last name" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="Address" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="Apartment, suits etc, (optional)" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="City" required/>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="Postal code" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="Phone number" required/>
+          </div>
+        </div>
+        <input type="submit" class="btn btn-dark" style="width: 180px; height: 40px; border-radius: 8px"
+          value="Proceed to Payment" />
+        <input type="button" class="btn btn-light" style="margin-left: 10px; background: transparent; border:white"
+          value="Go Back" />
+      </form>
+    </div>
+    <div class="flex-item-right">
+      <p class="heading" style="font-size: 24px; font-weight:bold">Cart</p>
+      <div>
+        <div class="cart">
+          <div class="cart-items">
+            <div class="row">
+              <img style="height:80px; width:80px; margin-left: 15px; margin-right: 30px;" src="img/cartImage.svg"
+                alt="" />
+              <div class="col">
+                <div class="row" style="margin-bottom:15px">
+                  <div style="font-size: 20px; font-weight: 700; margin-left: 5%;">Bagda Fish</div>
+                </div>
+                <div class="size">
+                  <div class="value-button" id="small-size" name="small-size" style="background: #c7c7c7;">
+                    <strong>S</strong>
+                  </div>
+                  <div class="value-button" id="medium-size" name="medium-size" style="background: #3375E5;">
+                    <strong style="color: white;">M</strong>
+                  </div>
+                  <div class="value-button" id="large-size" name="large-size" style="background: #c7c7c7">
+                    <strong style="color: #A0A0A0;">L</strong>
+                  </div>
+                </div>
+                </br>
+                <div class="quantity">
+                  <div class="value-button" onclick="decrementFunction('1')">
+                    <strong>-</strong>
+                  </div>
+                  <div class="value-button">
+                    <input style="width: 24.02px; height: 24.02px; text-align: center;" type="number" id="amount_1" value="0" disabled/>
+                  </div>
+                  <div class="value-button" onclick="incrementFunction('1')">
+                    <strong>+</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="float-right" onclick="functionName()"
+                  style="font-size: 20px; cursor:pointer; padding-right: 20px;">&#215</div>
+                </br>
+                </br>
+                </br>
+                <div class="float-right">
+                  <h6 style="padding-right: 20px; font-size: 20px;">&#2547 800/-</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-items">
+            <div class="row">
+              <img style="height:80px; width:80px; margin-left: 15px; margin-right: 30px;" src="img/cartImage.svg"
+                alt="" />
+              <div class="col">
+                <div class="row" style="margin-bottom:15px">
+                  <div style="font-size: 20px; font-weight: 700; margin-left: 5%;">Bele Fish</div>
+                </div>
+                <div class="size">
+                  <div class="value-button" id="small-size" name="small-size" style="background: #c7c7c7;">
+                    <strong>S</strong>
+                  </div>
+                  <div class="value-button" id="medium-size" name="medium-size" style="background: #3375E5;">
+                    <strong style="color: white;">M</strong>
+                  </div>
+                  <div class="value-button" id="large-size" name="large-size" style="background: #c7c7c7">
+                    <strong style="color: #A0A0A0;">L</strong>
+                  </div>
+                </div>
+                </br>
+                <div class="quantity">
+                  <div class="value-button" onclick="decrementFunction('2')">
+                    <strong>-</strong>
+                  </div>
+                  <div class="value-button">
+                    <input style="width: 24.02px; height: 24.02px; text-align: center;" type="number" id="amount_2" value="0" disabled/>
+                  </div>
+                  <div class="value-button" onclick="incrementFunction('2')">
+                    <strong>+</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="float-right" onclick="functionName()"
+                  style="font-size: 20px; cursor:pointer; padding-right: 20px;">&#215</div>
+                </br>
+                </br>
+                </br>
+                <div class="float-right">
+                  <h6 style="padding-right: 20px; font-size: 20px;">&#2547 1000/-</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </br>
+      <div class="heading">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control-sm" placeholder="Discount Code" />
+          </div>
+          <div class="col">
+            <button type="submit" onclick="functionName()"
+              style="font-size: medium; background-color: #B2B2B2; border-radius: 8px; border: none;">Apply</button>
+          </div>
+        </div>
+      </div>
+      <div class="heading">
+        <div class="row">
+          <div class="col">
+            <h6>Subtotal</h6>
+          </div>
+          <div class="col">
+            <h6 style="text-align: right;">&#2547 1800/-</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h6>Shipping</h6>
+          </div>
+          <div class="col">
+            <h6 style="text-align: right;"><b>&#2547</b> 100/-</h6>
+          </div>
+        </div>
+      </div>
+      </br>
+      <div class="heading">
+        <div class="row">
+          <div class="col">
+            <h5 style="font-weight: 800;">Total</h5>
+          </div>
+          <div class="col">
+            <h5 style="text-align: right; font-weight: 800;">&#2547 1900/-</h5>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-</div>
-
-
-</body>m
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous">
+</script>
+<script>
+  function incrementFunction(i) {
+    var x =  $('#amount_'+i).val();
+    x = parseInt(x) + 1;
+    $('#amount_'+i).val(x);
+  }
+  function decrementFunction(i) {
+    var x =  $('#amount_'+i).val();
+    x = parseInt(x);
+    if(x > 0){
+      x = x - 1;
+    }
+    $('#amount_'+i).val(x);
+  }
+</script>
 </html>
