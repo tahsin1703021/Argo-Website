@@ -5,6 +5,10 @@ var fresh_water = [];
 var all_items = [];
 var total_count_of_all_items;
 
+myStorage = window.localStorage;
+// localStorage.clear();
+cartItems = [];
+
 const loadAllFish = async () => {
   console.log('loading all fishes');
   const soft_shell_API = "https://agro-app-lpc.herokuapp.com/api/fishes/all?t=Soft%20Shell%20Crab"
@@ -236,13 +240,19 @@ const chooseFav = (element) =>{
   console.log("hello");
 }
 const FoundIt = (element) => {
-    let name,largePrice,smallPrice;  
+  let name,largePrice,smallPrice, cardDetails;
+  cartItems = localStorage.getItem("cartItems") == null ? [] : JSON.parse(localStorage.getItem("cartItems"));  
    all_items.map(card => {
      // console.log(card);
      if(element.id === card._id){
        name = card.name;
        largePrice = card.largePrice;
        smallPrice = card.smallPrice;
+
+      cardDetails = {"item": card};
+      cartItems.push(cardDetails);
+
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
       }
    });

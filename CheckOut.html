@@ -207,8 +207,8 @@
     <div class="flex-item-right">
       <p class="heading" style="font-size: 24px; font-weight:bold">Cart</p>
       <div>
-        <div class="cart">
-          <div class="cart-items">
+        <div id="cartItems" class="cart">
+          <!-- <div class="cart-items">
             <div class="row">
               <img style="height:80px; width:80px; margin-left: 15px; margin-right: 30px;" src="img/cartImage.svg"
                 alt="" />
@@ -251,8 +251,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="cart-items">
+          </div> -->
+          <!-- <div class="cart-items">
             <div class="row">
               <img style="height:80px; width:80px; margin-left: 15px; margin-right: 30px;" src="img/cartImage.svg"
                 alt="" />
@@ -295,7 +295,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       </br>
@@ -316,7 +316,7 @@
             <h6>Subtotal</h6>
           </div>
           <div class="col">
-            <h6 style="text-align: right;">&#2547 1800/-</h6>
+            <h6 id="subTotalValue" style="text-align: right;">&#2547 /-</h6>
           </div>
         </div>
         <div class="row">
@@ -324,7 +324,7 @@
             <h6>Shipping</h6>
           </div>
           <div class="col">
-            <h6 style="text-align: right;"><b>&#2547</b> 100/-</h6>
+            <h6  style="text-align: right;"><b>&#2547</b> 100/-</h6>
           </div>
         </div>
       </div>
@@ -335,7 +335,7 @@
             <h5 style="font-weight: 800;">Total</h5>
           </div>
           <div class="col">
-            <h5 style="text-align: right; font-weight: 800;">&#2547 1900/-</h5>
+            <h5 id="totalValue" style="text-align: right; font-weight: 800;">&#2547 </h5>
           </div>
         </div>
       </div>
@@ -343,22 +343,7 @@
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous">
-</script>
-<script>
-  function incrementFunction(i) {
-    var x =  $('#amount_'+i).val();
-    x = parseInt(x) + 1;
-    $('#amount_'+i).val(x);
-  }
-  function decrementFunction(i) {
-    var x =  $('#amount_'+i).val();
-    x = parseInt(x);
-    if(x > 0){
-      x = x - 1;
-    }
-    $('#amount_'+i).val(x);
-  }
-</script>
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="js/CheckOut.js"></script>
 </html>
