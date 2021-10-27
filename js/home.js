@@ -5,16 +5,23 @@ var fresh_water = [];
 var all_items = [];
 var total_count_of_all_items;
 
-<<<<<<< HEAD
-// $(document).ready(function(){
-//   $('.owl-carousel').owlCarousel();
-//   console.log("document.ready00");
-// });
-=======
 myStorage = window.localStorage;
 // localStorage.clear();
 cartItems = [];
->>>>>>> 486d388e4d2adf857d578abd5ff5a447932637ae
+
+function incrementFunction(i) {
+  var x = $("#amount_" + i).val();
+  x = parseInt(x) + 1;
+  $("#amount_" + i).val(x);
+}
+function decrementFunction(i) {
+  var x = $("#amount_" + i).val();
+  x = parseInt(x);
+  if (x > 0) {
+    x = x - 1;
+  }
+  $("#amount_" + i).val(x);
+}
 
 const loadAllFish = async () => {
   console.log('loading all fishes');
@@ -74,7 +81,6 @@ const loadAllFish = async () => {
   axios.all([request_soft_shell, request_seafood, request_sundarban, request_fresh])
   .then(axios.spread((...responses)=>{
       const response_soft_shell = responses[0];
-      // console.log(response_soft_shell);
       const response_seafood = responses[1];
       const response_sundarban = responses[2];
       const response_fresh = responses[3];
@@ -83,24 +89,19 @@ const loadAllFish = async () => {
       response_soft_shell.data.map(response =>{
         soft_shell_crab.push(response);        
       });
-      // console.log(soft_shell_crab);
     
       response_seafood.data.map(response =>{
         seafood.push(response);        
       });
-      // console.log(seafood);
 
       response_sundarban.data.map(response =>{
-        sundarban.push(response);  
-        console.log("ekhaen");      
+        sundarban.push(response);       
       });
-      // console.log(sundarban);
 
       response_fresh.data.map(response =>{
         fresh_water.push(response);
        
       });
-      // console.log(fresh_water);
      
 
       soft_shell_crab.map(items=>{
@@ -135,8 +136,6 @@ const loadAllFish = async () => {
        softproducts.innerHTML+=divElement;
        }
       });
-      // total_count_of_soft_shell = soft_shell_crab.length;
-      // document.getElementById('supSoft_Shell').innerHTML+=total_count_of_soft_shell;
       
       seafood.map(items=>{
         const divElement= 
@@ -222,9 +221,9 @@ const loadAllFish = async () => {
                  <div class="value-button" id="large-size" ><strong>L</strong></div> 
                </div>
                <div class="quantity">
-                 <div class="value-button" id="decrease"  value="Decrease Value" onclick="decreaseValue(this)" ><strong>-</strong></div>
+                 <div class="value-button" id="decrease"  value="Decrease Value" onclick="decreaseValue(this)"><strong>-</strong></div>
                  <input type="number" class="number" id= "numbers" style="height:22.7px;top:-2px" value="0"/>
-                 <div class="value-button" id="increase" value="Increase Value" onclick="increaseValue(this)" ><strong>+</strong></div>
+                 <div class="value-button" id="increase" value="Increase Value" onclick="increaseValue(this)"><strong>+</strong></div>
                </div>
          </div>
        </div>`;
@@ -240,12 +239,8 @@ const loadAllFish = async () => {
        
   }))
   .catch(error => console.log('On get all fish error', error));
-  
-
 }
-// $(document).ready(function(){
-//   $('.owl-carousel').owlCarousel();
-// });
+
 const chooseFav = (element) =>{
   console.log("hello");
 }
@@ -253,7 +248,6 @@ const FoundIt = (element) => {
   let name,largePrice,smallPrice, cardDetails;
   cartItems = localStorage.getItem("cartItems") == null ? [] : JSON.parse(localStorage.getItem("cartItems"));  
    all_items.map(card => {
-     // console.log(card);
      if(element.id === card._id){
        name = card.name;
        largePrice = card.largePrice;
@@ -283,25 +277,16 @@ const addtocart = (element) =>{
 }
 function increaseValue(element) {
   let itemQuantity = element.parentNode.getElementsByTagName('*')[2].value;
-  itemQuantity +=1;
-
+  var amount = parseInt(itemQuantity, 10);
+  amount+=1;
+  element.parentNode.getElementsByTagName('*')[2].value = amount;  
   console.log(element.parentNode.parentNode.parentNode);
-  
-  console.log("this is the increASE");
-  // let divs = element.getElementsByTagName('*')[1];
-
-  // console.log(divs);
-    var value = parseInt(document.getElementById('numbers').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('numbers').value = value;
   }
   
-  function decreaseValue() {
-    var value = parseInt(document.getElementById('numbers').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : '';
-    value--;
-    document.getElementById('numbers').value = value;
+  function decreaseValue(element) {
+    let itemQuantity = element.parentNode.getElementsByTagName('*')[2].value;
+    var amount = parseInt(itemQuantity, 10);
+    amount-=1;
+    element.parentNode.getElementsByTagName('*')[2].value = amount;  
   }
 

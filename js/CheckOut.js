@@ -123,6 +123,7 @@ let design = "";
 let Subtotal = 0;
 let Total = 0;
 let Shipping = 100;
+console.log(cartItems);
 for (var i = 0; i < cartItems.length; i++) {
   design = `<div id="${cartItems[i].item._id}" class="cart-items">
             <div class="row">

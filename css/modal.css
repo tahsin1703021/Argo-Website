@@ -1,160 +1,188 @@
-                                  /* home page modal styling starts */
-                                  .modal {
-                                    display: none; /* Hidden by default */
-                                    position: fixed; /* Stay in place */
-                                    padding-top: 100px; /* Location of the box */
-                                    left: 0;
-                                    top: 0;
-                                    width: 100%; /* Full width */
-                                    height: 100%; /* Full height */
-                                    overflow: auto; /* Enable scroll if needed */
-                                    background-color: rgb(0,0,0); /* Fallback color */
-                                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-                                  }
-                                                                  /* Modal Content */
-                                  .modal-content {
-                                    background-color: #fefefe;
-                                    margin: auto;
-                                    padding:20px;
-                                    padding-top: 70px;
-                                    box-sizing: border-box;
-                                    border: 1px solid #888;
-                                    position: fixed;
-                                      width: 320px;
-                                      height: 100%;
-                                    top: 0%;
-                                      transform: translate3d(0%, 0, 0);		
-                                  }
-                                  .modal-content li {
-                                    border-bottom: 1px solid  #257B9D;
-                                  }
-                                  .modal-content ul{
-                                    list-style-type: none;
-                                    cursor: pointer;
-                                    line-height: 45px;
-                                  } 
-                                  .right {
-                                    display: none; /* Hidden by default */
-                                    position: fixed; /* Stay in place */
-                                    z-index: 1; /* Sit on top */
-                                    padding-top: 100px; /* Location of the box */
-                                    right:0;
-                                    top: 0;
-                                    width: 100%; /* Full width */
-                                    height: 100%; /* Full height */
-                                    overflow: auto; /* Enable scroll if needed */
-                                    background-color: rgb(0,0,0); /* Fallback color */
-                                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-                                  }
-                                                                    /* Modal Content */
-                                  .rightcontent {
-                                    background-color: #fefefe;
-                                    margin: auto;
-                                    right:0;
-                                    padding:20px;
-                                    padding-top: 70px;
-                                    box-sizing: border-box;
-                                    border: 1px solid #888;
-                                    position: fixed;
-                                      width: 320px;
-                                      height: 100%;
-                                    top: 0%;
-                                      transform: translate3d(0%, 0, 0);		
-                                    
-                                  }
-                                  .rightSettings {
-                                    display: none; /* Hidden by default */
-                                    position: fixed; /* Stay in place */
-                                    z-index: 10; /* Sit on top */
-                                    padding-top: 100px; /* Location of the box */
-                                    right:0;
-                                    top: 0;
-                                    width: 100%; /* Full width */
-                                    height: 100%; /* Full height */
-                                    overflow: auto; /* Enable scroll if needed */
-                                    background-color: rgb(0,0,0); /* Fallback color */
-                                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-                                  }
-                                                                /* Modal Content */
-                                  .rightSettingsContent {
-                                    background-color: #fefefe;
-                                    margin: auto;
-                                    right:0;
-                                    padding:20px;
-                                    padding-top: 70px;
-                                    box-sizing: border-box;
-                                    border: 1px solid #888;
-                                    position: fixed;
-                                      width: 320px;
-                                      height: 34%;
-                                    top: 0%;
-                                      transform: translate3d(0%, 0, 0);		
-                                    
-                                  }
-                                                                 /* Modal Content */
-                                  
-                                                                /* The Close Button */
-                                  
-                                                                /* products modal close button starts */
-                                     .close {
-                                    color: #aaaaaa;
-                                    float: right;
-                                    font-size: 28px;
-                                    font-weight: bold;
-                                    text-align: center;
-                                  }
-                                  
-                                  .close:hover,
-                                  .close:focus {
-                                    color: #000;
-                                    text-decoration: none;
-                                    cursor: pointer;
-                                  }
-                                                                   /* products modal close button ends */
-                                                              
-                                                                   /* account modal close button starts */
-                                  
-                                  .closed {
-                                    color: #aaaaaa;
-                                    float: right;
-                                    font-size: 28px;
-                                    font-weight: bold;
-                                    text-align: center;
-                                    display: inline;
-                                    
-                                  }
-                                  .closed:hover,
-                                  .closed:focus {
-                                    color: #000;
-                                    text-decoration: none;
-                                    cursor: pointer;
-                                  }
-                                                                  /* account modal close button ends */
-                                                                  /* account settings modal starts */
-                                  
-                                  .closes {
-                                    color: #aaaaaa;
-                                    float: right;
-                                    font-size: 28px;
-                                    font-weight: bold;
-                                    text-align: center;
-                                    bottom: 10px;
-                                    position: relative;
-                                  }
-                                  
-                                  .closes:hover,
-                                  .closes:focus {
-                                    color: #000;
-                                    text-decoration: none;
-                                    cursor: pointer;
-                                  }
-                                                                     /* account settings modal ends*/
-                                  
-                                  .model-content li{
-                                    list-style-type: none;
-                                  }
-                                  .clearfix::after {
-                                    content: "";
-                                    clear: both;
-                                    display: table;
-                                  }                                  
+                                  /* home page  products modal styling starts */
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+                                
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding:20px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  border: 1px solid #888;
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  top: 0%;
+  transform: translate3d(0%, 0, 0);		
+}
+.modal-content li {
+  border-bottom: 1px solid  #257B9D;
+  list-style-type: none;
+}
+
+.modal-content ul{
+  list-style-type: none;
+  cursor: pointer;
+  line-height: 45px;
+} 
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+                                                    /* home page products modal ends */
+
+                                                    
+                                                    /* home page right side account modal starts */
+.right {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  right:0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.rightcontent {
+  background-color: #fefefe;
+  margin: auto;
+  right:0;
+  padding:20px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  /* border: 1px solid #888; */
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  top: 0%;
+  transform: translate3d(0%, 0, 0);		
+}
+
+.closed {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  display: inline;
+  
+}
+.closed:hover,
+.closed:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+                      /* home page right side account modal ends */
+
+                      /* home page right side account settings modal start */
+
+.rightSettings {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  right:0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.rightSettingsContent {
+  background-color: #fefefe;
+  margin: auto;
+  right:0;
+  padding:20px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  border: 1px solid #888;
+  position: fixed;
+    width: 320px;
+    height: 34%;
+  top: 0%;
+    transform: translate3d(0%, 0, 0);		
+  }
+
+  .closes {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    bottom: 10px;
+    position: relative;
+  }
+  
+  .closes:hover,
+  .closes:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+                     /* home page right side account settings modal ends */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}                  
+
+                                /* cart modal starts               */
+.cartModalContent{
+  background-color: #fefefe;
+  margin: auto;
+  right:0;
+  padding:20px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  border: 1px solid #888;
+  position: fixed;
+  width: 28%;
+  height: 100%;
+  top: 0%;
+  transform: translate3d(0%, 0, 0);	
+}
+.cart_modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  right:0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+                                              
+
+                                                /* cart modal ends */

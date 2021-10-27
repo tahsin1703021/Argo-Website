@@ -14,8 +14,6 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/ItemDetails.js"></script>
     <script src="js/Modal.js"></script>
-    <script src="Slider.js"></script>
-  
     <title>argo</title>
 </head>
 <body onload="loadAllFish()" style="padding-bottom:60px">
@@ -26,7 +24,7 @@
       
      <input type="text" placeholder="Search">
       <div class="icons" ><img src="img/favourite.svg" alt=""></div>
-      <div class="icons" ><img src="img/cartIcon.svg" alt=""></div>
+      <div class="icons" style="border: 1px solid yellow;" id="CARTmodal"  onclick="modal_func_CART()"><img src="img/cartIcon.svg" alt="CART"></div>
       <div class="icons" id="account" onclick="modal_func_ACCOUNT()"><img src="img/account.svg" alt=""></div>
 
     </div>
@@ -69,9 +67,6 @@
       <li><a href="./Categorized_Product_Page/SeaFood.html" style="text-decoration: none;color: black;">SeaFood</a></li>
       <li><a href="./Categorized_Product_Page/SundarBan.html" style="text-decoration: none;color: black;">Sundarbans Farm</a></li>
       <li><a href="./Categorized_Product_Page/Fresh_Water_Fish.html" style="text-decoration: none;color: black;">Fresh Water Fish</a></li>
-      
-
-
     </ul>
   </div>
 
@@ -80,7 +75,7 @@
 
 <!-- The account Modal starts -->
 
-<div id="accountModal" class="right" style="z-index: 2000;">
+<div id="accountModal" class="right" style="z-index: 20;">
 
   <!-- Modal content -->
   <div class="rightcontent">
@@ -91,17 +86,13 @@
       <li style="border-bottom: 1px solid  #257B9D;">My discounts</li>
       <li style="border-bottom: 1px solid  #257B9D;">Track my order</li>
       <li style="border-bottom: 1px solid  #257B9D;"><a style="text-decoration: none;color: black;" href="SignIn_SignUp.html">Sign in/Sign up/Log out</a></li>
-      
-
     </ul>
   </div>
 
 </div>
 
-<!-- The account Modal ends -->
-
 <!-- The accountSettings Modal starts -->
-<div id="accountSettingsModal" class="rightSettings" style="z-index: 7000;">
+<div id="accountSettingsModal" class="rightSettings" style="z-index: 70;">
 
   <!-- Modal content -->
   <div class="rightSettingsContent">
@@ -116,6 +107,17 @@
 </div>
 
 <!-- The accountSettings Modal ends -->
+
+<!-- cart modal starts -->
+  <div id="cartMODAL"  class="cart_modal" style="border: 1px solid yellow;z-index: 2000;">
+    <div class="cartModalContent" id="CARTmodal">
+      <h1>hkk</h1>
+      <h1>hkk</h1>
+      <h1>hkk</h1>
+      <h1>hkk</h1>
+    </div>
+  </div>
+<!-- cart modal ends -->
 
 <!-- fish for home background starts -->
 

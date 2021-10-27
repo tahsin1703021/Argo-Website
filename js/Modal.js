@@ -50,6 +50,7 @@ function modal_func_PRODUCTS(){
       if (event.target == modal) {
         modal.style.display = "none";
         console.log('account modal closed');
+        modal_func_ACCOUNT_SETTINGS();
       }
     }
    
@@ -79,6 +80,37 @@ function modal_func_PRODUCTS(){
         modal.style.display = "none";
         console.log('account settings modal closed');
         modal_func_ACCOUNT();
+      }
+    }
+  }
+
+  function modal_func_CART(){
+    console.log("cart clicked");
+    var modal = document.getElementById("cartMODAL");
+    
+    // Get the button that opens the modal
+    var butn = document.getElementById("CARTmodal");
+    
+    // //b  Get the <span> element that closes the modal
+    // var span = document.getElementsByClassName("closes")[0];
+    
+    // When the user clicks the button, open the modal 
+    butn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    // span.onclick = function() {
+    //   modal.style.display = "none";
+    // }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        console.log('account settings modal closed');
+        // modal_func_ACCOUNT();
+        modal_func_ACCOUNT_SETTINGS();
       }
     }
    
