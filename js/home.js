@@ -5,10 +5,16 @@ var fresh_water = [];
 var all_items = [];
 var total_count_of_all_items;
 
+<<<<<<< HEAD
 // $(document).ready(function(){
 //   $('.owl-carousel').owlCarousel();
 //   console.log("document.ready00");
 // });
+=======
+myStorage = window.localStorage;
+// localStorage.clear();
+cartItems = [];
+>>>>>>> 486d388e4d2adf857d578abd5ff5a447932637ae
 
 const loadAllFish = async () => {
   console.log('loading all fishes');
@@ -244,13 +250,19 @@ const chooseFav = (element) =>{
   console.log("hello");
 }
 const FoundIt = (element) => {
-    let name,largePrice,smallPrice;  
+  let name,largePrice,smallPrice, cardDetails;
+  cartItems = localStorage.getItem("cartItems") == null ? [] : JSON.parse(localStorage.getItem("cartItems"));  
    all_items.map(card => {
      // console.log(card);
      if(element.id === card._id){
        name = card.name;
        largePrice = card.largePrice;
        smallPrice = card.smallPrice;
+
+      cardDetails = {"item": card};
+      cartItems.push(cardDetails);
+
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
       }
    });
