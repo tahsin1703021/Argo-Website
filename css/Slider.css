@@ -3,6 +3,8 @@
   display: none;
 }
                           /* slider start */
+
+                          /* slider nafigation arrows start */
 .arrow{
   position: absolute;
   top:8px;
@@ -23,6 +25,8 @@
 .arrow > span:nth-of-type(2){
   right: -20px;
 }
+
+                          /* slider navigation arrows start */
 .slider {
   box-sizing: border-box;
   padding-top: 50px;
@@ -43,7 +47,7 @@
   position: absolute;
   overflow-x: hidden;
   left: 0;
-  height:500px;;
+  height:500px;
   transition: 0.3s left ease-in-out;
   /* border: 1px solid red; */
 }
@@ -54,3 +58,4 @@
   margin-right: 0;
 }
                               /* slider ends */
+ 

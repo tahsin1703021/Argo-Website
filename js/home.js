@@ -5,6 +5,11 @@ var fresh_water = [];
 var all_items = [];
 var total_count_of_all_items;
 
+// $(document).ready(function(){
+//   $('.owl-carousel').owlCarousel();
+//   console.log("document.ready00");
+// });
+
 const loadAllFish = async () => {
   console.log('loading all fishes');
   const soft_shell_API = "https://agro-app-lpc.herokuapp.com/api/fishes/all?t=Soft%20Shell%20Crab"
@@ -25,11 +30,11 @@ const loadAllFish = async () => {
     });
     all_items.map(items=>{
       const divElement= 
-       `<div class="item" onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} name=${items.name} onclick="FoundIt(this)">
+       `<div class="item" onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" name=${items.name}>
             <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="Like">
-              <div class="item-background">
-              <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
-                <button> Add to cart </button>
+              <div class="item-background" id=${items._id} onclick="FoundIt(this)">
+                <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
+                  <button> Add to cart </button>
               </div>
               <div class="cart-caption" style="float: right;">${items.largePrice}</div>
               <div class="cart-caption">${items.name}</div>
@@ -94,9 +99,9 @@ const loadAllFish = async () => {
 
       soft_shell_crab.map(items=>{
        const divElement= 
-        `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
+        `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
           <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="Like">
-          <div class="item-background">
+          <div class="item-background" id=${items._id} onclick="FoundIt(this)">
             <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
             <button> Add to cart </button>
           </div>
@@ -129,12 +134,12 @@ const loadAllFish = async () => {
       
       seafood.map(items=>{
         const divElement= 
-         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
+         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
             <img class="favClick" src="img/whiteHeart.svg" alt="Like">
-             <div class="item-background">
-            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
-             <button> Add to cart </button>
-           </div>
+             <div class="item-background" id=${items._id} onclick="FoundIt(this)">
+                <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
+                <button> Add to cart </button>
+             </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
            <div class="cart-caption">${items.name}</div>
            <div class="cart-lower">
@@ -165,7 +170,7 @@ const loadAllFish = async () => {
         const divElement= 
          `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
          <img class="favClick" src="img/whiteHeart.svg" alt="Like">
-           <div class="item-background">
+           <div class="item-background" id=${items._id} onclick="FoundIt(this)">
            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
              <button> Add to cart </button>
            </div>
@@ -193,12 +198,12 @@ const loadAllFish = async () => {
         Sundarban_Products.innerHTML+=divElement;
         }
        });
-
+      
        fresh_water.map(items=>{
         const divElement= 
-         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id} onclick="FoundIt(this)">
+         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
           <img class="favClick" src="img/whiteHeart.svg" alt="Like" onclick="chooseFav(this)">
-           <div class="item-background">
+           <div class="item-background" id=${items._id} onclick="FoundIt(this)">
            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}>  
              <button> Add to cart </button>
            </div>
@@ -211,9 +216,9 @@ const loadAllFish = async () => {
                  <div class="value-button" id="large-size" ><strong>L</strong></div> 
                </div>
                <div class="quantity">
-                 <div class="value-button" id="decrease"  value="Decrease Value"><strong>-</strong></div>
+                 <div class="value-button" id="decrease"  value="Decrease Value" onclick="decreaseValue(this)" ><strong>-</strong></div>
                  <input type="number" class="number" id= "numbers" style="height:22.7px;top:-2px" value="0"/>
-                 <div class="value-button" id="increase" value="Increase Value" onclick="increaseValue(this)"><strong>+</strong></div>
+                 <div class="value-button" id="increase" value="Increase Value" onclick="increaseValue(this)" ><strong>+</strong></div>
                </div>
          </div>
        </div>`;
@@ -232,6 +237,9 @@ const loadAllFish = async () => {
   
 
 }
+// $(document).ready(function(){
+//   $('.owl-carousel').owlCarousel();
+// });
 const chooseFav = (element) =>{
   console.log("hello");
 }
@@ -262,7 +270,12 @@ const addtocart = (element) =>{
     
 }
 function increaseValue(element) {
-  console.log(element);
+  let itemQuantity = element.parentNode.getElementsByTagName('*')[2].value;
+  itemQuantity +=1;
+
+  console.log(element.parentNode.parentNode.parentNode);
+  
+  console.log("this is the increASE");
   // let divs = element.getElementsByTagName('*')[1];
 
   // console.log(divs);
