@@ -24,7 +24,7 @@
       
      <input type="text" placeholder="Search">
       <div class="icons" ><img src="img/favourite.svg" alt=""></div>
-      <div class="icons" style="border: 1px solid yellow;" id="CARTmodal"  onclick="modal_func_CART()"><img src="img/cartIcon.svg" alt="CART"></div>
+      <div class="icons" id="CARTmodal"  onclick="modal_func_CART()"><img src="img/cartIcon.svg" alt="CART"></div>
       <div class="icons" id="account" onclick="modal_func_ACCOUNT()"><img src="img/account.svg" alt=""></div>
 
     </div>
@@ -109,12 +109,53 @@
 <!-- The accountSettings Modal ends -->
 
 <!-- cart modal starts -->
-  <div id="cartMODAL"  class="cart_modal" style="border: 1px solid yellow;z-index: 2000;">
+  <div id="cartMODAL"  class="cart_modal" style="z-index: 2000;">
     <div class="cartModalContent" id="CARTmodal">
-      <h1>hkk</h1>
-      <h1>hkk</h1>
-      <h1>hkk</h1>
-      <h1>hkk</h1>
+      <p class="heading" style="font-size: 24px; font-weight:bold; border-bottom: 1px solid #257b9d;
+      padding-top: 4px; color: black; line-height: 50px;">Cart</p>
+      <div id="cartItems" class="cart">
+
+      </div>
+      <div class="cart-heading">
+        <div class="form-row">
+          <div class="col-md-9">
+            <input type="text" class="form-control-sm" style="background-color: white; color:black" placeholder="Discount Code"/>
+          </div>
+          <div class="col-md-3">
+            <button type="submit" onclick="functionName()"
+              style="font-size: medium; width:70px;padding: 2px; background-color: #B2B2B2; border-radius: 8px; border: none;">Apply</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-heading">
+        <div class="row">
+          <div class="col">
+            <h6>Subtotal</h6>
+          </div>
+          <div class="col">
+            <h6 id="subTotalValue" style="text-align: right;">&#2547 /-</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h6>Shipping</h6>
+          </div>
+          <div class="col">
+            <h6  style="text-align: right;"><b>&#2547</b> 100/-</h6>
+          </div>
+        </div>
+      </div>
+      </br>
+      <div class="cart-heading">
+        <div class="row">
+          <div class="col">
+            <h5 style="font-weight: 800;">Total</h5>
+          </div>
+          <div class="col">
+            <h5 id="totalValue" style="text-align: right; font-weight: 800;">&#2547 </h5>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 <!-- cart modal ends -->

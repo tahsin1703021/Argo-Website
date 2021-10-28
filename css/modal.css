@@ -157,7 +157,7 @@
 
                                 /* cart modal starts               */
 .cartModalContent{
-  background-color: #fefefe;
+  background: linear-gradient(0deg, #f3f2ed, #f3f2ed);
   margin: auto;
   right:0;
   padding:20px;
