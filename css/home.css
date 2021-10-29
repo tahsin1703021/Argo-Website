@@ -1,21 +1,27 @@
-html,body{ padding-right: 0px;margin: 0px;overflow-x: hidden; }
-@font-face { font-family: AvenirNext; src: url(../AvenirNextLTPro-Demi.otf); }
-body{
+html,
+body {
+  padding-right: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: AvenirNext;
+  src: url(../AvenirNextLTPro-Demi.otf);
+}
+body {
   background-image: url(background2.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:center center fixed;
+  background-position: center center fixed;
   background-attachment: fixed;
   width: 100%;
   font-style: normal;
-  
-/* font-weight: 600; */
+
+  /* font-weight: 600; */
 }
 
-
-
-                        /* fish fro home  styles start */
-.fishforhome{
+/* fish fro home  styles start */
+.fishforhome {
   width: 100%;
   background-image: url(../img/crab-2.gif);
   background-position: bottom;
@@ -27,33 +33,23 @@ body{
   top: 71px;
   margin-bottom: 100px;
 }
-                        /* fish fro home  styles end */
+/* fish fro home  styles end */
 
-
-                        /* Item heading styles start */
-.heading{
+/* Item heading styles start */
+.heading {
   color: white;
   width: 99%;
   position: relative;
   font-weight: 600;
   font-size: 65px;
   line-height: 157px;
-  
 }
 
-.cart-heading {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
-  border-bottom: 1px solid #257b9d;
-  padding-bottom: 4px;
-  padding-top: 4px;
-}
 
-                          /* Item heading styles ends */
+/* Item heading styles ends */
 
-                        /* soft shell crab logo styles starts */
-.ssc-Logo{
+/* soft shell crab logo styles starts */
+.ssc-Logo {
   position: absolute;
   width: 52.54px;
   height: 45.25px;
@@ -61,11 +57,10 @@ body{
   top: 53.5px;
   transform: rotate(-50deg);
 }
-                          /* soft shell crab styles ends */
+/* soft shell crab styles ends */
 
-
-                          /* Seafood styles start */
-.sf-Logo{
+/* Seafood styles start */
+.sf-Logo {
   position: absolute;
   width: 52.54px;
   height: 45.25px;
@@ -73,40 +68,39 @@ body{
   top: 55px;
   transform: matrix(-0.64, -0.77, -0.77, 0.64, 0, 0);
 }
-                          /* Seafood styles ends*/
+/* Seafood styles ends*/
 
-                          /* Sundarbans firm logo styles start */
-.suf-Logo{
-position: absolute;
-width: 52.54px;
-height: 45.25px;
-left: 92px;
-top: 53.5px;
-transform: rotate(-50deg);
+/* Sundarbans firm logo styles start */
+.suf-Logo {
+  position: absolute;
+  width: 52.54px;
+  height: 45.25px;
+  left: 92px;
+  top: 53.5px;
+  transform: rotate(-50deg);
 }
-                          /* Sundarbans firm styles end */
+/* Sundarbans firm styles end */
 
-
-                          /* fresh water fish logo styles start */
-.fwf-Logo{
-position: absolute;
-width: 50.54px;
-height: 45.25px;
-right: 154px;
-top: 54.8px;
-transform: rotate(-50deg);
+/* fresh water fish logo styles start */
+.fwf-Logo {
+  position: absolute;
+  width: 50.54px;
+  height: 45.25px;
+  right: 154px;
+  top: 54.8px;
+  transform: rotate(-50deg);
 }
-                          /* fresh water fish logo styles end */
+/* fresh water fish logo styles end */
 
-                          /* All products button in homepage styles start */
-.AllProducts{
+/* All products button in homepage styles start */
+.AllProducts {
   text-align: center;
   padding: 50px;
   box-sizing: border-box;
   border-radius: 15px;
 }
 
-.AllProducts button{
+.AllProducts button {
   height: 56px;
   width: 329px;
   border-radius: 15px;
@@ -114,23 +108,21 @@ transform: rotate(-50deg);
   border: 1px solid white;
   color: white;
   cursor: pointer;
-
 }
-.AllProducts button:hover{
+.AllProducts button:hover {
   background-color: black;
   border: none;
-
 }
-                            /* All products button in homepage styles end */
+/* All products button in homepage styles end */
 
- .clearfix::after {
-   content: "";
-   clear: both;
-   display: table;
- }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-                            /* home page lower card starts */
-#container{
+/* home page lower card starts */
+#container {
   height: 550px;
   box-sizing: border-box;
   padding: 40px;
@@ -138,12 +130,12 @@ transform: rotate(-50deg);
   backdrop-filter: blur(60px);
   color: white;
 }
-                          /* home page lower card ends */
+/* home page lower card ends */
 
-                  /* From here on the following styles are of the all products page         */
+/* From here on the following styles are of the all products page         */
 
-                        /* All products page heading styling starts */
-.ProductsHeading{
+/* All products page heading styling starts */
+.ProductsHeading {
   /* font-family: 'Avenir Next'; */
   margin-top: 200px;
   font-weight: 600;
@@ -153,109 +145,21 @@ transform: rotate(-50deg);
   color: white;
   /* border: 1px solid yellow; */
   box-sizing: border-box;
-  padding-left:30px;
+  padding-left: 30px;
 }
-                        /* All products page heading styling ends */
+/* All products page heading styling ends */
 
-                        /* Count of All Products styling starts */
+/* Count of All Products styling starts */
 
-.count_of_products{
+.count_of_products {
   font-size: 30px;
-  position:relative;
-  top:-45px;
+  position: relative;
+  top: -45px;
 }
-                        /* Count of All Products styling ends */
+/* Count of All Products styling ends */
 
 @media only screen and (max-width: 900px) {
-  .logo{
+  .logo {
     left: 30%;
   }
 }
-
-
-
-.value-button {
-  display: inline-block;
-  text-align: center;
-  width: 24.02px;
-  height: 24.02px;
-  border-radius: 4.13px;
-}
-
-form #decrease {
-  margin-right: -4px;
-}
-
-form #increase {
-  margin-left: -4px;
-}
-
-.form-control-sm {
-  border: none;
-  border-radius: 10px;
-  width: 250px;
-  height: 30px;
-  margin-bottom:6px;
-}
-
-input#number {
-  text-align: center;
-  border: none;
-  margin: 10px;
-  width: 40px;
-  height: 20px;
-  color: black;
-  background-color: transparent;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 10;
-}
-
-/* input[type="text"] {
-  width: 100%;
-  margin-bottom: 12px;
-} */
-
-.value-button:hover {
-  cursor: pointer;
-} 
-
-.cart {
-  height: 320px;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  flex-direction: column;
-}
-
-.cart-items {
-  height: 155px;
-  width: 100%;
-  border-bottom: 1px solid #257b9d;
-  margin-bottom: 10px;
-}
-
-.cart-quantity {
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 10px;
-  flex-direction: column;
-  width: 200px;
-  align-items: center;
-}
-
-/* .quantity {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  justify-content: space-between;
-  box-sizing: border-box;
-  text-align: center;
-  color: black;
-  width: 100px;
-  border-radius: 8px;
-} */
