@@ -45,8 +45,8 @@ const loadAllFish = async () => {
       const divElement= 
        `<div class="item" onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" name=${items.name}>
             <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="Like">
-              <div class="item-background" id=${items._id}>
-                <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name} onclick="FoundIt(this)">  
+              <div class="item-background">
+                <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name} id=${items._id} onclick="FoundIt(this)">  
                   <button> Add to cart </button>
               </div>
               <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -108,8 +108,8 @@ const loadAllFish = async () => {
        const divElement= 
         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
           <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="Like">
-          <div class="item-background" id=${items._id}>
-            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name} onclick="FoundIt(this)">  
+          <div class="item-background">
+            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}  id=${items._id} onclick="FoundIt(this)">  
             <button> Add to cart </button>
           </div>
           <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -141,8 +141,8 @@ const loadAllFish = async () => {
         const divElement= 
          `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
             <img class="favClick" src="img/whiteHeart.svg" alt="Like">
-             <div class="item-background" id=${items._id}>
-                <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name} onclick="FoundIt(this)">  
+             <div class="item-background">
+                <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}  id=${items._id} onclick="FoundIt(this)">  
                 <button> Add to cart </button>
              </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -175,8 +175,8 @@ const loadAllFish = async () => {
         const divElement= 
          `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id}>
          <img class="favClick" src="img/whiteHeart.svg" alt="Like">
-           <div class="item-background" id=${items._id}>
-           <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name} onclick="FoundIt(this)">  
+           <div class="item-background">
+           <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}  id=${items._id} onclick="FoundIt(this)">  
              <button> Add to cart </button>
            </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -208,8 +208,8 @@ const loadAllFish = async () => {
         const divElement= 
          `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
           <img class="favClick" src="img/whiteHeart.svg" alt="Like" onclick="chooseFav(this)">
-           <div class="item-background" id=${items._id}>
-           <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name} onclick="FoundIt(this)">  
+           <div class="item-background">
+           <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}  id=${items._id} onclick="FoundIt(this)">  
              <button> Add to cart </button>
            </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
@@ -277,8 +277,10 @@ const addtocart = (element) =>{
 }
 function increaseValue(element) {
   let itemQuantity = element.parentNode.getElementsByTagName('*')[2].value;
+  console.log(itemQuantity);
   var amount = parseInt(itemQuantity, 10);
   amount+=1;
+  
   element.parentNode.getElementsByTagName('*')[2].value = amount;  
   console.log(element.parentNode.parentNode.parentNode);
   }
