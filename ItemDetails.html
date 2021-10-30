@@ -9,8 +9,7 @@
         <link rel="stylesheet" href="css/Slider.css">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="js/home.js"></script>
-        <script src="js/ItemDetails.js"></script>
+        
         <title>Products Details</title> 
         <link rel="icon" href="./img/baal2.svg" type="image/svg">   
     </head>
@@ -22,7 +21,7 @@
       
      <input type="text" placeholder="Search">
       <div class="icons" ><img src="img/favourite.svg" alt=""></div>
-      <div class="icons" ><img src="img/cartIcon.svg" alt=""></div>
+      <div class="icons" style="color: rgb(224, 241, 65); font-weight: 800;" id="CARTmodal" onclick="modal_func_CART()"><img src="img/cartIcon.svg" alt="CART"></div>
       <div class="icons" id="account" onclick="modal_func_ACCOUNT()"><img src="img/account.svg" alt=""></div>
 
     </div>
@@ -113,6 +112,68 @@
 
 <!-- The accountSettings Modal ends -->
 
+<!-- cart modal starts -->
+<div id="cartMODAL" class="cart_modal" style="z-index: 2000;">
+  <div class="cartModalContent" id="CARTmodal">
+    <p class="heading" style="font-size: 24px; font-weight:bold; border-bottom: 1px solid #257b9d;
+    padding-top: 4px; color: black; line-height: 50px;">Cart <span class="closes"
+        style="color: black;">&times;</span></p>
+    <div id="cartItems" class="cart">
+    </div>
+    <br>
+    <div id="shippingDetails">
+      <div class="cart-heading">
+        <div class="form-row">
+          <div class="col-md-9">
+            <input type="text" id="discountCode" class="form-control-sm" style="background-color: white; color:black;"
+              placeholder="Discount Code" />
+          </div>
+          <div class="col-md-3">
+            <button type="submit" onclick="functionName()"
+              style="font-size: medium; width:70px;padding: 2px; background-color: #B2B2B2; border-radius: 8px; border: none;">Apply</button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="cart-heading">
+        <div class="row">
+          <div class="col">
+            <h6>Subtotal</h6>
+          </div>
+          <div class="col">
+            <h6 style="text-align: right;">&#2547 <span id="subTotalValue"> </span> /-</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h6>Shipping</h6>
+          </div>
+          <div class="col">
+            <h6 style="text-align: right;"><b>&#2547</b> 100/-</h6>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="cart-heading">
+        <div class="row">
+          <div class="col">
+            <h5 style="font-weight: 800;">Total</h5>
+          </div>
+          <div class="col">
+            <h5 style="text-align: right; font-weight: 800;">&#2547 <span id="totalValue"></span> /- </h5>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div style="text-align: center;">
+        <input type="button" id="cartSubmitButton" class="btn btn-dark" onclick="modal_func_CARTSUBMIT()"
+          style="width: 180px; height: 40px; border-radius: 8px;" value="Proceed to Payment" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- cart modal ends -->
+
     <div id="DetailedSection">
       
     </div>
@@ -130,22 +191,14 @@
         <input type="radio" name="star" id="star5"><label for="star5"></label>
       </div>
     </div>
-    
-
-
-
-
-
-
-
-
-
-
-
    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
+    <script src="js/home.js"></script>
+    <script src="js/ItemDetails.js"></script>
+    <script src="js/Modal.js"></script>
+    <script src="js/Cart.js"></script>
     </body>
 </html>

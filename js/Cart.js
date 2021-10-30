@@ -1,4 +1,4 @@
-cartItems = JSON.parse(localStorage.getItem("cartItems"));
+cartItems = localStorage.getItem("cartItems") == null ? [] : JSON.parse(localStorage.getItem("cartItems"));
 
 let mediumColor = '#A0A0A0', smallColor = '#A0A0A0', largeColor = '#A0A0A0';
 let mediumBackgroundColor = '#c7c7c7', smallBackgroundColor = '#c7c7c7', largeBackgroundColor = '#c7c7c7';

@@ -1,7 +1,7 @@
-var soft_shell_crab=[];
+var soft_shell_crab = [];
 var seafood = [];
 var sundarban = [];
-var fresh_water = []; 
+var fresh_water = [];
 var all_items = [];
 var total_count_of_all_items;
 
@@ -29,25 +29,25 @@ const loadAllFish = async () => {
   const seafood_API = "https://agro-app-lpc.herokuapp.com/api/fishes/all?t=Seafood&fbclid=IwAR1M-DhFCSHolLln0QXbeovzt8zJgkzLixEXUkJNLiRjkYCdnMLpSJnzM00"
   const sundarban_API = "https://agro-app-lpc.herokuapp.com/api/fishes/all?t=Sundarbans%20Firm"
   const fresh_water_API = "https://agro-app-lpc.herokuapp.com/api/fishes/all?t=Fresh%20Water%20Fish"
-  
+
 
   const request_soft_shell = axios.get(soft_shell_API);
   const request_seafood = axios.get(seafood_API);
   const request_sundarban = axios.get(sundarban_API);
   const request_fresh = axios.get(fresh_water_API);
-  
+
   axios.get("https://agro-app-lpc.herokuapp.com/api/fishes/all?fbclid=IwAR3Ye39kLxBKKtZI6b_IFbW40OKMk0hWLSnstbLtPGlDh1MSB4M0-CgVt8c")
-  .then(response=>{
-    response.data.map(result=>{
-      all_items.push(result); 
-    });
-    all_items.map(items=>{
-      const divElement= 
-       `<div class="item" onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" name=${items.name}>
+    .then(response => {
+      response.data.map(result => {
+        all_items.push(result);
+      });
+      all_items.map(items => {
+        const divElement =
+          `<div class="item" onmouseenter="addtocartview(this)" onmouseleave="vanishingcart(this)" name=${items.name}>
             <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="Like">
               <div class="item-background">
                 <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name} id=${items._id} onclick="FoundIt(this)">  
-                  <button> Add to cart </button>
+                  <button onclick="addtocart('${items._id}')"> Add to cart </button>
               </div>
               <div class="cart-caption" style="float: right;">${items.largePrice}</div>
               <div class="cart-caption">${items.name}</div>
@@ -64,53 +64,53 @@ const loadAllFish = async () => {
                   </div>
             </div>
           </div>`;
-     const products = document.getElementById('All_Products');
-     if(products != null){
-      products.innerHTML+=divElement;
-      // console.log("not null");this is will onlyu execute when someone enters the all products page
-      }
-     });
-     total_count_of_all_items = all_items.length;
-     document.getElementById('supAll_Products').innerHTML+=total_count_of_all_items;
+        const products = document.getElementById('All_Products');
+        if (products != null) {
+          products.innerHTML += divElement;
+          // console.log("not null");this is will onlyu execute when someone enters the all products page
+        }
+      });
+      total_count_of_all_items = all_items.length;
+      document.getElementById('supAll_Products').innerHTML += total_count_of_all_items;
 
-  })
-  .catch(error => console.log(error));
-  
- 
-  
+    })
+    .catch(error => console.log(error));
+
+
+
   axios.all([request_soft_shell, request_seafood, request_sundarban, request_fresh])
-  .then(axios.spread((...responses)=>{
+    .then(axios.spread((...responses) => {
       const response_soft_shell = responses[0];
       const response_seafood = responses[1];
       const response_sundarban = responses[2];
       const response_fresh = responses[3];
-     
 
-      response_soft_shell.data.map(response =>{
-        soft_shell_crab.push(response);        
-      });
-    
-      response_seafood.data.map(response =>{
-        seafood.push(response);        
+
+      response_soft_shell.data.map(response => {
+        soft_shell_crab.push(response);
       });
 
-      response_sundarban.data.map(response =>{
-        sundarban.push(response);       
+      response_seafood.data.map(response => {
+        seafood.push(response);
       });
 
-      response_fresh.data.map(response =>{
+      response_sundarban.data.map(response => {
+        sundarban.push(response);
+      });
+
+      response_fresh.data.map(response => {
         fresh_water.push(response);
-       
-      });
-     
 
-      soft_shell_crab.map(items=>{
-       const divElement= 
-        `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
+      });
+
+
+      soft_shell_crab.map(items => {
+        const divElement =
+          `<div class="item" name=${items.name} onmouseenter="addtocartview(this)" onmouseleave="vanishingcart(this)">
           <img id="chooseFavourite" class="favClick" src="img/WhiteHeart.svg" alt="Like">
           <div class="item-background">
             <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}  id=${items._id} onclick="FoundIt(this)">  
-            <button> Add to cart </button>
+            <button onclick="addtocart('${items._id}')"> Add to cart </button>
           </div>
           <div class="cart-caption" style="float: right;">${items.largePrice}</div>
           <div class="cart-caption">${items.name}</div>
@@ -127,23 +127,23 @@ const loadAllFish = async () => {
               </div>
         </div>
       </div>`;
-      const slide = document.getElementById('slide_soft_shell_crab');
-      if(slide != null){
-        slide.innerHTML+=divElement;
-      }
-      const softproducts = document.getElementById('Soft_Products');
-      if(softproducts != null){
-       softproducts.innerHTML+=divElement;
-       }
+        const slide = document.getElementById('slide_soft_shell_crab');
+        if (slide != null) {
+          slide.innerHTML += divElement;
+        }
+        const softproducts = document.getElementById('Soft_Products');
+        if (softproducts != null) {
+          softproducts.innerHTML += divElement;
+        }
       });
-      
-      seafood.map(items=>{
-        const divElement= 
-         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
+
+      seafood.map(items => {
+        const divElement =
+          `<div class="item" name=${items.name} onmouseenter="addtocartview(this)" onmouseleave="vanishingcart(this)">
             <img class="favClick" src="img/whiteHeart.svg" alt="Like">
              <div class="item-background">
                 <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}  id=${items._id} onclick="FoundIt(this)">  
-                <button> Add to cart </button>
+                <button onclick="addtocart('${items._id}')"> Add to cart </button>
              </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
            <div class="cart-caption">${items.name}</div>
@@ -160,24 +160,24 @@ const loadAllFish = async () => {
                </div>
          </div>
        </div>`;
-       const slide = document.getElementById('slide_seafood');
-       if(slide != null){
-        slide.innerHTML+=divElement;
-      }
-      const seaFood_products = document.getElementById('Sea');
-      if(seaFood_products != null){
-        seaFood_products.innerHTML+=divElement;
+        const slide = document.getElementById('slide_seafood');
+        if (slide != null) {
+          slide.innerHTML += divElement;
         }
-       });
-       
-       sundarban.map(items=>{
+        const seaFood_products = document.getElementById('Sea');
+        if (seaFood_products != null) {
+          seaFood_products.innerHTML += divElement;
+        }
+      });
+
+      sundarban.map(items => {
         console.log("ekhaen");
-        const divElement= 
-         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)" id=${items._id}>
+        const divElement =
+          `<div class="item" name=${items.name} onmouseenter="addtocartview(this)" onmouseleave="vanishingcart(this)" id=${items._id}>
          <img class="favClick" src="img/whiteHeart.svg" alt="Like">
            <div class="item-background">
            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}  id=${items._id} onclick="FoundIt(this)">  
-             <button> Add to cart </button>
+             <button onclick="addtocart('${items._id}')"> Add to cart </button>
            </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
            <div class="cart-caption">${items.name}</div>
@@ -194,23 +194,23 @@ const loadAllFish = async () => {
                </div>
          </div>
        </div>`;
-       const slide = document.getElementById('slide_sundarban');
-       if(slide != null){
-        slide.innerHTML+=divElement;
-      }
-      const sundarban_products = document.getElementById('Sundarban_Products');
-      if(Sundarban_Products!= null){
-        Sundarban_Products.innerHTML+=divElement;
+        const slide = document.getElementById('slide_sundarban');
+        if (slide != null) {
+          slide.innerHTML += divElement;
         }
-       });
-      
-       fresh_water.map(items=>{
-        const divElement= 
-         `<div class="item" name=${items.name} onmouseenter="addtocart(this)" onmouseleave="vanishingcart(this)">
+        const sundarban_products = document.getElementById('Sundarban_Products');
+        if (Sundarban_Products != null) {
+          Sundarban_Products.innerHTML += divElement;
+        }
+      });
+
+      fresh_water.map(items => {
+        const divElement =
+          `<div class="item" name=${items.name} onmouseenter="addtocartview(this)" onmouseleave="vanishingcart(this)">
           <img class="favClick" src="img/whiteHeart.svg" alt="Like" onclick="chooseFav(this)">
            <div class="item-background">
            <img src=${items.avatar} style="width:100%;height:auto" alt=${items.name}  id=${items._id} onclick="FoundIt(this)">  
-             <button> Add to cart </button>
+             <button onclick="addtocart('${items._id}')"> Add to cart </button>
            </div>
            <div class="cart-caption" style="float: right;">${items.largePrice}</div>
            <div class="cart-caption">${items.name}</div>
@@ -227,67 +227,92 @@ const loadAllFish = async () => {
                </div>
          </div>
        </div>`;
-       const slide = document.getElementById('slide_fresh');
-       if(slide != null){
-        slide.innerHTML+=divElement;
-      }
-      const fresh_products = document.getElementById('Fresh_Water_Products');
-      if(fresh_products!= null){
-        fresh_products.innerHTML+=divElement;
+        const slide = document.getElementById('slide_fresh');
+        if (slide != null) {
+          slide.innerHTML += divElement;
         }
-       });
-       
-  }))
-  .catch(error => console.log('On get all fish error', error));
+        const fresh_products = document.getElementById('Fresh_Water_Products');
+        if (fresh_products != null) {
+          fresh_products.innerHTML += divElement;
+        }
+      });
+
+    }))
+    .catch(error => console.log('On get all fish error', error));
 }
 
-const chooseFav = (element) =>{
+const chooseFav = (element) => {
   console.log("hello");
 }
 const FoundIt = (element) => {
-  let name,largePrice,smallPrice, cardDetails;
-  cartItems = localStorage.getItem("cartItems") == null ? [] : JSON.parse(localStorage.getItem("cartItems"));  
-   all_items.map(card => {
-     if(element.id === card._id){
-       name = card.name;
-       largePrice = card.largePrice;
-       smallPrice = card.smallPrice;
+  let name, largePrice, smallPrice, id;
+  // cartItems = localStorage.getItem("cartItems") == null ? [] : JSON.parse(localStorage.getItem("cartItems"));  
+  all_items.map(card => {
+    if (element.id === card._id) {
+      name = card.name;
+      largePrice = card.largePrice;
+      smallPrice = card.smallPrice;
+      id = card._id;
 
-      cartItems.push(card);
+      // cartItems.push(card);
 
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      // localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-      }
-   });
-   const URL = "http://127.0.0.1:5500/ItemDetails.html?name="+name+";smallPrice="+smallPrice+";largePrice="+largePrice;
-   document.location.href = URL;
+    }
+  });
+  const URL = "http://127.0.0.1:5500/ItemDetails.html?name=" + name + ";smallPrice=" + smallPrice + ";largePrice=" + largePrice + ";id=" + id;
+  document.location.href = URL;
 }
-const addtocart = (element) =>{
+
+const addtocart = (itemId) => {
+  console.log(itemId);
+  cartItems = localStorage.getItem("cartItems") == null ? [] : JSON.parse(localStorage.getItem("cartItems"));
+  all_items.map(card => {
+    if (itemId === card._id) {
+      let added = 0;
+
+      cartItems.map(cartItem => {
+        if (cartItem._id === itemId) added = 1;
+      });
+
+      if (added === 0) {
+        cartItems.push(card);
+        console.log(cartItems);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        location.reload();
+      }
+
+    }
+  });
+}
+
+const addtocartview = (element) => {
   // console.log(element);
-     element.getElementsByTagName('*')[6].style.display = "block";
-     element.getElementsByTagName('*')[3].style.display = "block";
-     element.getElementsByTagName('*')[0].style.display = "block";
-   }
-   const vanishingcart = (element) =>{
-    element.getElementsByTagName('*')[6].style.display = "none";
-    element.getElementsByTagName('*')[3].style.display = "none";
-    element.getElementsByTagName('*')[0].style.display = "none";
-    
+  element.getElementsByTagName('*')[6].style.display = "block";
+  element.getElementsByTagName('*')[3].style.display = "block";
+  element.getElementsByTagName('*')[0].style.display = "block";
+}
+const vanishingcart = (element) => {
+  element.getElementsByTagName('*')[6].style.display = "none";
+  element.getElementsByTagName('*')[3].style.display = "none";
+  element.getElementsByTagName('*')[0].style.display = "none";
+
 }
 function increaseValue(element) {
   let itemQuantity = element.parentNode.getElementsByTagName('*')[2].value;
   console.log(itemQuantity);
   var amount = parseInt(itemQuantity, 10);
-  amount+=1;
-  
-  element.parentNode.getElementsByTagName('*')[2].value = amount;  
+  amount += 1;
+
+  element.parentNode.getElementsByTagName('*')[2].value = amount;
   console.log(element.parentNode.parentNode.parentNode);
-  }
-  
-  function decreaseValue(element) {
-    let itemQuantity = element.parentNode.getElementsByTagName('*')[2].value;
-    var amount = parseInt(itemQuantity, 10);
-    amount-=1;
-    element.parentNode.getElementsByTagName('*')[2].value = amount;  
-  }
+}
+
+function decreaseValue(element) {
+  let itemQuantity = element.parentNode.getElementsByTagName('*')[2].value;
+  var amount = parseInt(itemQuantity, 10);
+  amount -= 1;
+  element.parentNode.getElementsByTagName('*')[2].value = amount;
+}
 

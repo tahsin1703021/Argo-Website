@@ -8,6 +8,7 @@ for (var i =0;i<str.length;i++){
 }
 var smallPrice = link.split(';')[1].split('=')[1];
 var largePrice = link.split(';')[2].split('=')[1];
+var id = link.split(';')[3].split('=')[1];
 
 const loading = () => {
     let detailedID = document.getElementById('DetailedSection');
@@ -39,7 +40,7 @@ const loading = () => {
                 <div class="value-button" id="large-size" ><strong>L</strong></div> 
             </div>
         </div>
-        <button class="addToCartButton" style="margin-top: 30px;"> Add to Cart </button>
+        <button onclick="addtocart('${id}')" class="addToCartButton" style="margin-top: 30px;"> Add to Cart </button>
         <button class="buyButton" style="margin-top: 10px;"> Buy </button>
         
     </div>
