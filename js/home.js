@@ -253,8 +253,7 @@ const FoundIt = (element) => {
        largePrice = card.largePrice;
        smallPrice = card.smallPrice;
 
-      cardDetails = {"item": card};
-      cartItems.push(cardDetails);
+      cartItems.push(card);
 
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
