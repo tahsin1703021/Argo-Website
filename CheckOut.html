@@ -11,139 +11,7 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-<style type="text/css">
-  body {
-    background: linear-gradient(0deg, #f3f2ed, #f3f2ed);
-    overflow: hidden;
-  }
-
-  .links {
-    text-decoration: none !important;
-  }
-
-  .heading {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-    border-bottom: 1px solid #257b9d;
-    padding-bottom: 4px;
-    padding-top: 4px;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .flex-item-left {
-    padding: 30px;
-    padding-left: 70px;
-    padding-right: 70px;
-    flex: 60%;
-    border-right: 1px solid #257B9D;
-  }
-
-  .flex-item-right {
-    padding: 30px;
-    padding-left: 50px;
-    flex: 40%;
-  }
-
-  .value-button {
-    display: inline-block;
-    text-align: center;
-    width: 24.02px;
-    height: 24.02px;
-    border-radius: 4.13px;
-  }
-
-  form #decrease {
-    margin-right: -4px;
-  }
-
-  form #increase {
-    margin-left: -4px;
-  }
-
-  .form-control-sm {
-    border: none;
-    border-radius: 10px;
-    width: 300px;
-  }
-
-  input#number {
-    text-align: center;
-    border: none;
-    margin: 10px;
-    width: 40px;
-    height: 20px;
-    color: black;
-    background-color: transparent;
-  }
-
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 10;
-  }
-
-  input[type="text"] {
-    width: 100%;
-    margin-bottom: 12px;
-  }
-
-  .value-button:hover {
-    cursor: pointer;
-  }
-
-  .cart {
-    height: 320px;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex-direction: column;
-  }
-
-  .cart-items {
-    height: 155px;
-    width: 100%;
-    border-bottom: 1px solid #257b9d;
-    margin-bottom: 10px;
-  }
-
-  .cart-quantity {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 10px;
-    flex-direction: column;
-    width: 200px;
-    align-items: center;
-  }
-
-  .quantity {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    justify-content: space-between;
-    box-sizing: border-box;
-    text-align: center;
-    color: black;
-    width: 100px;
-    border-radius: 8px;
-  }
-
-  /* Responsive layout - makes a one column-layout instead of two-column layout */
-  @media (max-width: 800px) {
-    .flex-container {
-      flex-direction: column;
-    }
-  }
-</style>
+  <link rel="stylesheet" href="css/CheckOut.css">
 
 <body>
   <div class="flex-container" style="margin-left: 50px;">
@@ -208,50 +76,6 @@
       <p class="heading" style="font-size: 24px; font-weight:bold">Cart</p>
       <div>
         <div id="cartItems" class="cart">
-          <!-- <div class="cart-items">
-            <div class="row">
-              <img style="height:80px; width:80px; margin-left: 15px; margin-right: 30px;" src="img/cartImage.svg"
-                alt="" />
-              <div class="col">
-                <div class="row" style="margin-bottom:15px">
-                  <div style="font-size: 20px; font-weight: 700; margin-left: 5%;">Bagda Fish</div>
-                </div>
-                <div class="size">
-                  <div class="value-button" id="small-size" name="small-size" style="background: #c7c7c7;">
-                    <strong>S</strong>
-                  </div>
-                  <div class="value-button" id="medium-size" name="medium-size" style="background: #3375E5;">
-                    <strong style="color: white;">M</strong>
-                  </div>
-                  <div class="value-button" id="large-size" name="large-size" style="background: #c7c7c7">
-                    <strong style="color: #A0A0A0;">L</strong>
-                  </div>
-                </div>
-                </br>
-                <div class="quantity">
-                  <div class="value-button" onclick="decrementFunction('1')">
-                    <strong>-</strong>
-                  </div>
-                  <div class="value-button">
-                    <input style="width: 24.02px; height: 24.02px; text-align: center;" type="number" id="amount_1" value="0" disabled/>
-                  </div>
-                  <div class="value-button" onclick="incrementFunction('1')">
-                    <strong>+</strong>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="float-right" onclick="functionName()"
-                  style="font-size: 20px; cursor:pointer; padding-right: 20px;">&#215</div>
-                </br>
-                </br>
-                </br>
-                <div class="float-right">
-                  <h6 style="padding-right: 20px; font-size: 20px;">&#2547 800/-</h6>
-                </div>
-              </div>
-            </div>
-          </div> -->
           <!-- <div class="cart-items">
             <div class="row">
               <img style="height:80px; width:80px; margin-left: 15px; margin-right: 30px;" src="img/cartImage.svg"
@@ -345,5 +169,5 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
-  <script src="js/CheckOut.js"></script>
+  <script src="js/Cart.js"></script>
 </html>

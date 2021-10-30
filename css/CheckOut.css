@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(0deg, #f3f2ed, #f3f2ed);
+    overflow: hidden;
+  }
+
+  .links {
+    text-decoration: none !important;
+  }
+
+  .heading {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    border-bottom: 1px solid #257b9d;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-item-left {
+    padding: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    flex: 60%;
+    border-right: 1px solid #257B9D;
+  }
+
+  .flex-item-right {
+    padding: 30px;
+    padding-left: 50px;
+    flex: 40%;
+  }
+
+  .value-button {
+    display: inline-block;
+    text-align: center;
+    width: 24.02px;
+    height: 24.02px;
+    border-radius: 4.13px;
+  }
+
+  form #decrease {
+    margin-right: -4px;
+  }
+
+  form #increase {
+    margin-left: -4px;
+  }
+
+  .form-control-sm {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  input#number {
+    text-align: center;
+    border: none;
+    margin: 10px;
+    width: 40px;
+    height: 20px;
+    color: black;
+    background-color: transparent;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 10;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .value-button:hover {
+    cursor: pointer;
+  }
+
+  .cart {
+    height: 320px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+
+  .cart-items {
+    height: 155px;
+    width: 100%;
+    /* border-bottom: 1px solid #257b9d; */
+    margin-bottom: 10px;
+  }
+
+  .cart-quantity {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+  }
+
+  .quantity {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+    width: 100px;
+    border-radius: 8px;
+  }
+
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
