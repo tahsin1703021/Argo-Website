@@ -158,7 +158,8 @@ if (cartItems.length == 0) {
                     </div>
                   </div>
                   </br>
-                  <div class="quantity">
+                  <br>
+                  <div style="position: absolute; bottom: 0;" class="quantity">
                     <div class="value-button" onclick="decrementFunction('${cartItems[i].item._id}')">
                       <strong>-</strong>
                     </div>
@@ -178,7 +179,9 @@ if (cartItems.length == 0) {
                   </br>
                   </br>
                   </br>
-                  <div class="float-right">
+                  <br>
+                  <br>
+                  <div style="position: absolute; bottom: 0;" class="float-right">
                     <h6 id="price_${cartItems[i].item._id}" style="padding-right: 20px; font-size: 20px;">&#2547 ${cartItems[i].item.smallPrice}/-</h6>
                   </div>
                 </div>

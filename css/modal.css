@@ -163,10 +163,11 @@
   box-sizing: border-box;
   border: 1px solid #888;
   position: fixed;
-  width: 28%;
+  width: 31%;
   height: 100%;
   top: 0%;
   transform: translate3d(0%, 0, 0);
+  overflow-y: auto; /* Enable scroll if needed */
 }
 .cart_modal {
   display: none; /* Hidden by default */
@@ -177,7 +178,6 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
@@ -243,7 +243,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .cart {
   height: 320px;
   width: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   flex-direction: column;
 }
