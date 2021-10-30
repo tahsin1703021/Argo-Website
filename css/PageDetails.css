@@ -7,12 +7,12 @@ body{
   background-position:center center fixed;
   background-attachment: fixed;
   width: 100%;
-  font-style: normal;
-  
+  font-family: AvenirNext;
 /* font-weight: 600; */
 }
 #DetailedSection{
-    margin-top: 15%;
+    margin-top: 180px;
+    margin-bottom: 80px;
 }
 .productBox{
     display: flex;
@@ -76,4 +76,60 @@ body{
 .buyButton:hover{
     background-color: black;
     color: white;
+}
+
+.commentSection{
+    border-bottom:1px solid black;
+    width: 70%;
+    margin:auto;
+}
+.commentSection>p {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    border-bottom: 20px;
+}
+.ratingSection{
+    display: flex;
+    
+}
+.ratingSection input{
+display: flex;
+}
+.ratingSection input{
+    display: none;
+}
+.ratingSection label{
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    position: relative;
+
+}
+.ratingSection label:before
+{
+    content:'\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 25px;
+    color:#101010;
+}
+.ratingSection label:after
+{
+    content:'\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 25px;
+    color: yellow;
+    top: 0;
+    opacity: 1;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.ratingSection label:hover:after,
+.ratingSection input:checked ~ label:after
+{
+    opacity: 0;
 }
