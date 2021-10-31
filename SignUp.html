@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="css/modal.css">
+
   <style type="text/css">
     body {
       background: linear-gradient(0deg, #F3F2ED, #F3F2ED);
@@ -27,7 +29,8 @@
     }
   </style>
 
-  <title>Document</title>
+  <title>Sign Up</title>
+  <link rel="icon" href="./img/baal2.svg" type="image/svg">
 </head>
 
 <body>
@@ -72,6 +75,7 @@
     </div>
   </div>
   <!-- main navbar ends -->
+
   <!-- The products Modal starts -->
   <div id="productsModal" class="modal" style="z-index: 10;">
 
@@ -140,6 +144,7 @@
   </div>
 
   <!-- The accountSettings Modal ends -->
+  
   <br><br><br>
   <div
     style="margin-left:10px;width: 98%;padding-left: 50px;padding-right: 80px;box-sizing: border-box;display: flex;justify-content: space-around;">
@@ -152,7 +157,7 @@
             style="font-size: 15px;width: 260px;height: 42.87px; border-radius: 3.95px;text-align: center;border:0.66px solid black;">
           &nbsp;&nbsp;&nbsp;&nbsp;
           <button id="otpButton"
-            style="background-color: black; color:white;font-size: 15px; margin-top: 7px; width: 90px;height: 30.87px;text-align: center;border-radius: 4px;border:0.66px solid black;">Send
+            style="background-color: black; color:white;font-size: 15px; margin-top: 7px; width: 90px;height: 30.87px;text-align: center;border-radius: 4px;border:0.66px solid black; cursor: pointer;">Send
             OTP</button>
         </div>
         <div class="form-group row" style="display: none; margin-left: 55px;" id="confirmOTP">
@@ -164,14 +169,15 @@
             style="font-size: 15px;width: 260px;height: 42.87px;border-radius: 3.95px;text-align: center;border:0.66px solid black;">
         </div>
         <div class="form-group row" style="margin-left: 55px;">
-          <input required name="confirmpass" id="confirmPassword" type="password" class="form-control" placeholder="Confirm Password"
+          <input required name="confirmpass" id="confirmPassword" type="password" class="form-control"
+            placeholder="Confirm Password"
             style="font-size: 15px;width: 260px;height: 42.87px;border-radius: 3.95px;text-align: center;border:0.66px solid black;">
           &nbsp;&nbsp;&nbsp;&nbsp;<span id="checkMark" class="checkmark"></span>
           <span id="crossMark" style="border: crimson; font-size: 25px; display: none;">&#10060;</span>
         </div>
         <br>
         <div class="form-group row" style="margin-left: 120px;" id="signup">
-          <button type="submit" class="form-control" placeholder="Sign Up"
+          <button type="submit" class="btn btn-black form-control" placeholder="Sign Up"
             style="font-size: 15px; background-color: black; color:white; width: 130px;height: 42.87px;border-radius: 3.95px;text-align: center;border:0.66px solid black; margin-bottom: 12px;">Sign
             Up</button>
         </div>
@@ -256,6 +262,7 @@
 
   <script src="js/home.js"></script>
   <script src="js/SignUp.js"></script>
+  <script src="js/Modal.js"></script>
 
 </body>
 

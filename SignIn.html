@@ -9,14 +9,15 @@
   <link rel="stylesheet" href="css/SignIn_SignUp.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="css/modal.css">
   <style type="text/css">
     body {
       background: linear-gradient(0deg, #F3F2ED, #F3F2ED);
     }
   </style>
 
-  <title>Document</title>
+  <title>Sign In</title>
+  <link rel="icon" href="./img/baal2.svg" type="image/svg">
 </head>
 
 <body>
@@ -141,7 +142,7 @@
         <input required type="password" class="form-control" placeholder="Password" id="password"
           style="font-size: 15px;width: 260px;height: 42.87px;border-radius: 3.95px;text-align: center;border:0.66px solid black;margin-bottom: 12px;">
         <br>
-        <button type="button" id="submitButton" onclick="signinSubmit()"
+        <button type="button" id="submitButton" class="btn btn-black" onclick="signinSubmit()"
           style="background: black; border:0.66px solid black;width: 130px;height: 42.87px;border-radius: 3.95px;text-align: center;margin-bottom: 13px; margin-left: 25%; font-size: 17.08px; color: white; font-family: sans-serif;">
           Sign In</button>
         <br><br><br>
@@ -223,9 +224,9 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-    <script src="js/home.js"></script>
-    <script src="js/SignIn.js"></script>
-
+  <script src="js/home.js"></script>
+  <script src="js/SignIn.js"></script>
+  <script src="js/Modal.js"></script>
 </body>
 
 </html>

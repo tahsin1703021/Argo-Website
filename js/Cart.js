@@ -148,7 +148,7 @@ function cancelCart(id) {
   cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
   for (let i = 0; i < cartItems.length; i++) {
-    if ((cartItems[i]._id = id)) {
+    if ((cartItems[i]._id == id)) {
       cartItems.splice(i, 1);
       break;
     }

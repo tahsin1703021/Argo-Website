@@ -3,6 +3,8 @@ var link = href.split('?')[1];
 var FullName = link.split(';')[0].split('=')[1];
 var str = FullName.split('%20');
 var a  = "";
+var all_items = [];
+
 for (var i =0;i<str.length;i++){
     a= a + str[i] + " ";
 }
@@ -46,5 +48,14 @@ const loading = () => {
     </div>
     </div>`;
     detailedID.innerHTML += details;
+
+    axios.get("https://agro-app-lpc.herokuapp.com/api/fishes/all?fbclid=IwAR3Ye39kLxBKKtZI6b_IFbW40OKMk0hWLSnstbLtPGlDh1MSB4M0-CgVt8c")
+    .then(response => {
+      response.data.map(result => {
+        all_items.push(result);
+      });
+
+    })
+    .catch(error => console.log(error));
 
 }
