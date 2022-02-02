@@ -1,6 +1,6 @@
 body {
     background: linear-gradient(0deg, #f3f2ed, #f3f2ed);
-    overflow: hidden;
+    overflow: auto;
   }
 
   .links {
@@ -89,7 +89,7 @@ body {
   .cart {
     height: 320px;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     flex-direction: column;
   }

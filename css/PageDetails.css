@@ -58,6 +58,7 @@ body{
 .addToCartButton:hover{
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 .buyButton{
     text-align: center;
@@ -76,6 +77,7 @@ body{
 .buyButton:hover{
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 .commentSection{

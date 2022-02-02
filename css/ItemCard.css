@@ -43,6 +43,7 @@
  .item button:hover{
    background-color:black;
    color: white;
+   cursor: pointer;
  }
  .quantity{
   border: 1px solid black;

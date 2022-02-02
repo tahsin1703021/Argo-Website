@@ -1,21 +1,30 @@
-var categoryToBeShown = [];
-var href = document.location.href;//url
-var link = href.split('?')[1];//attributes in the url
-var FullName = link.split(';')[0].split('=')[1];//name with percentage
-var typePercentage = link.split(';')[3].split('=')[1];//the type of food that is selected with percentage
-var typeArray = typePercentage.split('%20'); //type array
-var type="";
-for (var i =0;i<1;i++){
-    type= type + typeArray[i];//loop including the array elements of strings
-}
-// console.log(type);
-var str = FullName.split('%20');//array that holds the full name seperated by spaces
-var a  = "";//string that holds the full name including spaces and will be displayed
+// var categoryToBeShown = [];
+// var href = document.location.href;//url
+// var link = href.split('?')[1];//attributes in the url
+// var FullName = link.split(';')[0].split('=')[1];//name with percentage
+// var typePercentage = link.split(';')[3].split('=')[1];//the type of food that is selected with percentage
+// var typeArray = typePercentage.split('%20'); //type array
+// var type="";
+// for (var i =0;i<1;i++){
+//     type= type + typeArray[i];//loop including the array elements of strings
+// }
+// // console.log(type);
+// var str = FullName.split('%20');//array that holds the full name seperated by spaces
+// var a  = "";//string that holds the full name including spaces and will be displayed
+var href = document.location.href;
+var link = href.split('?')[1];
+var FullName = link.split(';')[0].split('=')[1];
+var str = FullName.split('%20');
+var a  = "";
+var all_items = [];
+
 for (var i =0;i<str.length;i++){
     a= a + str[i] + " ";//loop including the array elements of strigs
 }
 var smallPrice = link.split(';')[1].split('=')[1];
 var largePrice = link.split(';')[2].split('=')[1];
+var id = link.split(';')[3].split('=')[1];
+
 const loading = () => {
     axios.get("https://agro-app-lpc.herokuapp.com/api/fishes/all?fbclid=IwAR3Ye39kLxBKKtZI6b_IFbW40OKMk0hWLSnstbLtPGlDh1MSB4M0-CgVt8c")
     .then(result=>{
@@ -88,7 +97,7 @@ const loading = () => {
                 <div class="value-button" id="large-size" ><strong>L</strong></div> 
             </div>
         </div>
-        <button class="addToCartButton" style="margin-top: 30px;"> Add to Cart </button>
+        <button onclick="addtocart('${id}')" class="addToCartButton" style="margin-top: 30px;"> Add to Cart </button>
         <button class="buyButton" style="margin-top: 10px;"> Buy </button>
         
     </div>
@@ -106,4 +115,13 @@ buttonRight.onclick = function () {
 }
 buttonLeft.onclick = function() {
     document.getElementById('cart').scrollLeft -=500;
+    axios.get("https://agro-app-lpc.herokuapp.com/api/fishes/all?fbclid=IwAR3Ye39kLxBKKtZI6b_IFbW40OKMk0hWLSnstbLtPGlDh1MSB4M0-CgVt8c")
+    .then(response => {
+      response.data.map(result => {
+        all_items.push(result);
+      });
+
+    })
+    .catch(error => console.log(error));
+
 }

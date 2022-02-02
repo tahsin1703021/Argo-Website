@@ -23,7 +23,7 @@
 
       <input type="text" placeholder="Search">
       <div class="icons"><img src="img/favourite.svg" alt=""></div>
-      <div class="icons" id="CARTmodal" onclick="modal_func_CART()"><img src="img/cartIcon.svg" alt="CART"></div>
+      <div class="icons" style="color: rgb(224, 241, 65); font-weight: 800;" id="CARTmodal" onclick="modal_func_CART()"><img src="img/cartIcon.svg" alt="CART"></div>
       <div class="icons" id="account" onclick="modal_func_ACCOUNT()"><img src="img/account.svg" alt=""></div>
 
     </div>
@@ -146,7 +146,7 @@
               <h6>Subtotal</h6>
             </div>
             <div class="col">
-              <h6 id="subTotalValue" style="text-align: right;">&#2547 /-</h6>
+              <h6 style="text-align: right;">&#2547 <span id="subTotalValue"> </span> /-</h6>
             </div>
           </div>
           <div class="row">
@@ -165,7 +165,7 @@
               <h5 style="font-weight: 800;">Total</h5>
             </div>
             <div class="col">
-              <h5 id="totalValue" style="text-align: right; font-weight: 800;">&#2547 </h5>
+              <h5 style="text-align: right; font-weight: 800;">&#2547 <span id="totalValue"></span> /- </h5>
             </div>
           </div>
         </div>
