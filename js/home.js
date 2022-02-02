@@ -245,22 +245,22 @@ const chooseFav = (element) =>{
   console.log("hello");
 }
 const FoundIt = (element) => {
-  let name,largePrice,smallPrice, cardDetails;
+  let name,largePrice,smallPrice, cardDetails,itemtype;
   cartItems = localStorage.getItem("cartItems") == null ? [] : JSON.parse(localStorage.getItem("cartItems"));  
    all_items.map(card => {
      if(element.id === card._id){
        name = card.name;
        largePrice = card.largePrice;
        smallPrice = card.smallPrice;
-
-      cardDetails = {"item": card};
-      cartItems.push(cardDetails);
+       itemtype = card.itemType;
+       cardDetails = {"item": card};
+       cartItems.push(cardDetails);
 
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
+    
       }
    });
-   const URL = "http://127.0.0.1:5500/ItemDetails.html?name="+name+";smallPrice="+smallPrice+";largePrice="+largePrice;
+   const URL = "http://127.0.0.1:5500/ItemDetails.html?name="+name+";smallPrice="+smallPrice+";largePrice="+largePrice+";itemtype="+itemtype;
    document.location.href = URL;
 }
 const addtocart = (element) =>{

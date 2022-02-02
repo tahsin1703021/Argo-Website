@@ -126,7 +126,7 @@ let design = "";
 let Subtotal = 0;
 let Total = 0;
 let Shipping = 100;
-console.log(cartItems);
+// console.log(cartItems);
 
 if (cartItems.length == 0) {
   document.getElementById("cartItems").innerHTML += "There are no items in the cart";

@@ -5,7 +5,7 @@
                           /* slider start */
 
                           /* slider nafigation arrows start */
-.arrow{
+/* .arrow{
   position: absolute;
   top:8px;
   font-size: 40px;
@@ -14,8 +14,9 @@
   color: white;
   cursor: pointer;
   right: 10px;
-  width: 60px;
+  width: 57px;
   max-height: 25px;
+  
  
 }
 .arrow>span{
@@ -24,12 +25,31 @@
 }
 .arrow > span:nth-of-type(2){
   right: -20px;
+} */
+.shell_arrows,.sea_arrows,.sun_arrows,.f_arrows{
+  position: relative;
 }
-
+.shell_left, .shell_right,
+.sea_left,.sea_right,
+.sun_left,.sun_right,
+.f_left,.f_right
+{
+  font-size: 40px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+.shell_left,.shell_right,
+.sun_left,.sun_right{
+  left: 93%;
+}
+.sea_left,.sea_right,
+.f_left,.f_right{
+  left: 4.5%;
+}
                           /* slider navigation arrows start */
 .slider {
   box-sizing: border-box;
-  padding-top: 50px;
   width: 92%;
   height:541.7px;
   position: relative;

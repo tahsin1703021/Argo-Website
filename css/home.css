@@ -19,7 +19,9 @@ body {
 
   /* font-weight: 600; */
 }
-
+html{
+  scroll-behavior: smooth;
+}
 /* fish fro home  styles start */
 .fishforhome {
   width: 100%;
@@ -135,7 +137,7 @@ body {
 /* From here on the following styles are of the all products page         */
 
 /* All products page heading styling starts */
-.ProductsHeading {
+.ProductsHeading,.Fav_Heading {
   /* font-family: 'Avenir Next'; */
   margin-top: 200px;
   font-weight: 600;
@@ -151,7 +153,7 @@ body {
 
 /* Count of All Products styling starts */
 
-.count_of_products {
+.count_of_products,.count_of_favs {
   font-size: 30px;
   position: relative;
   top: -45px;
